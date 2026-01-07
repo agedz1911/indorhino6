@@ -58,7 +58,7 @@
                     <li class="text-sm font-normal hover:text-amber-400 hover:underline"><a wire:navigate
                             href="#">{{__('menu.schedule')}}</a></li>
                     <li class="text-sm font-normal hover:text-amber-400 hover:underline"><a wire:navigate
-                            href="/registration">{{__('menu.registration')}}</a></li>
+                            href="#">{{__('menu.registration')}}</a></li>
                     <li class="text-sm font-normal hover:text-amber-400 hover:underline"><a wire:navigate
                             href="#">{{__('menu.visit')}}</a></li>
                 </ul>

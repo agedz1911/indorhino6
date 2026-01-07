@@ -29,7 +29,7 @@ Route::get('/welcome-message', WelcomeRemarks::class);
 Route::get('/organizing-committee', Committee::class);
 Route::get('/sponsor', Sponsor::class)->name('sponsor');
 Route::get('/submission', Submission::class);
-Route::get('/registration', Registration::class);
+// Route::get('/registration', Registration::class);
 
 // Route::prefix('/congress-information')->group(function () {
 //     Route::get('/', CongressInformation::class);
