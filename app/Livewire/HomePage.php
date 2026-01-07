@@ -2,7 +2,7 @@
 
 namespace App\Livewire;
 
-use App\Models\Sponsor;
+use App\Models\sponsor;
 use App\Models\tour;
 use App\Models\User;
 use App\Models\WelcomeMessage;
