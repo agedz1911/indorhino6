@@ -24,4 +24,7 @@ return [
     'room_type' => 'Jenis kamar',
     'book_now' => 'Pesan sekarang',
     'reservation_info' => 'Informasi hotel',
+    'visit' => 'Mengunjungi',
+    'visit_venue' => 'Tempat Konferensi',
+    'social_program' => 'Program Sosial',
 ];

@@ -4,15 +4,15 @@
             <div class="stat-figure text-[#0A192F]">
                 <i class="fa fa-user inline-block text-4xl stroke-current"></i>
             </div>
-            <div class="stat-title font-semibold">Secretariat</div>
-            <div class="stat-desc">Ms. Silvia</div>
+            <div class="stat-title font-semibold">{{__('menu.contact_ps')}}</div>
+            <div class="stat-desc">Ms. Nova</div>
         </div>
 
         <div class="stat">
             <div class="stat-figure text-[#0A192F]">
                 <i class="fa fa-location-dot inline-block text-4xl stroke-current"></i>
             </div>
-            <div class="stat-title font-semibold">Address</div>
+            <div class="stat-title font-semibold">{{__('menu.secretariat')}}</div>
             <div class="stat-desc">Kompleks Perkantoran <br> Duta Merlin Blok C/35 <br>
                 Jl. Gajah Mada 3 - 5, Jakarta</div>
         </div>
@@ -32,7 +32,7 @@
                 <i class="fa fa-envelope inline-block text-4xl stroke-current"></i>
             </div>
             <div class="stat-title font-semibold">Email</div>
-            <div class="stat-desc hover:underline hover:text-primary"><a href="mailto:apfsrm2026bali@pharma-pro.com">apfsrm2026bali@pharma-pro.com</a></div>
+            <div class="stat-desc hover:underline hover:text-primary"><a href="mailto:indorhino2026@pharma-pro.com">indorhino2026@pharma-pro.com</a></div>
         </div>
 
         <div class="stat">
@@ -41,7 +41,7 @@
             </div>
             <div class="stat-title font-semibold">Whatsapp</div>
             <div class="stat-desc">
-                <a class="hover:underline hover:text-primary" target="_blank" href="https://wa.me/+62816995230"> +62 816-995-230 (Silvia) </a> <br>
+                <a class="hover:underline hover:text-primary" target="_blank" href="https://wa.me/+6282277832431"> +62 822 7783 2431 </a> <br>
                 <!-- <a class="hover:underline hover:text-primary" target="_blank" href="https://wa.me/+6285215510055"> +62 852-1551-0055 (Isma) </a> -->
             </div>
         </div>
@@ -56,3 +56,4 @@
 
         </div>
     </div>
+</div>

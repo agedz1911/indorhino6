@@ -3,8 +3,11 @@
 namespace App\Livewire\Resources;
 
 use App\Models\WelcomeMessage;
+use Livewire\Attributes\Title;
 use Livewire\Component;
 
+
+#[Title('Welcome Remarks - 6th INDORHINO Congress')]
 class WelcomeRemarks extends Component
 {
     public function render()

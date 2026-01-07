@@ -20,14 +20,14 @@
         href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&display=swap"
         rel="stylesheet">
 
-    <!--FontAwesome CSS-->
-    <script src="https://kit.fontawesome.com/6d07745da9.js" crossorigin="anonymous"></script>
     <!-- daisy ui -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 
     <!-- theme daisyui -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@$5/themes.css" rel="stylesheet" type="text/css" />
+    <!--FontAwesome CSS-->
+    <script src="https://kit.fontawesome.com/6d07745da9.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -37,7 +37,7 @@
     {{ $slot }}
 
     <x-nav.footer />
-    <a href="#" onclick="topFunction()" id="back-to-top" class="btn btn-square btn-sm btn-primary z-40 fixed right-5 md:right-10 bottom-10 over:-translate-y-1 hover:scale-105"><i class="fa-solid text-white fa-arrow-up"></i></a>
+    <a href="#" onclick="topFunction()" id="back-to-top" class="btn btn-square btn-sm bg-[#be124e] border-0 hover:bg-[#930d3c] rounded-lg  z-40 fixed right-5 md:right-10 bottom-10 over:-translate-y-1 hover:scale-105"><i class="fa-solid text-white fa-arrow-up"></i></a>
 
     <script src="assets/js/custom.js" data-navigate-once></script>
 

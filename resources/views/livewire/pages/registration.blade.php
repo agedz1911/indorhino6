@@ -1,149 +1,223 @@
-<div class="bg-slate-50">
-    <div class="pt-16 pb-52 lg:px-20 px-2">
-        <div class="flex-col flex gap-3 mb-10">
-            <h4 class="text-2xl text-primary-600 font-semibold">{{ __('menu.registration') }}</h4>
-            <h1 class="text-4xl text-primary-700 font-semibold">{{ __('menu.registration_fee') }}</h1>
+<div>
+    <section class="breadcrumbs relative pb-0">
+        <div class="absolute inset-0 bg-gradient-to-t from-[#D9F9F5]/10 to-[#015149]/80"></div>
+        <div class="py-16 lg:py-28 text-center relative">
+            <h2 class="text-white uppercase text-2xl font-semibold tracking-wide lg:text-4xl">{{__('menu.registration_fee')}}</h2>
         </div>
-        <div class="card bg-price bg-perhati-50 shadow-md">
-            <div class="card-body w-full">
-                <h1 class="uppercase font-semibold text-lg">Symposium</h1>
-                <div class="overflow-x-auto">
-                    <table class="table table-zebra text-center">
-                        <!-- head -->
-                        <thead>
-                            <tr class="">
-                                <th class="text-start" style="width: 32%;">{{__('home.reg_category')}}</th>
-                                <th>{{__('home.early_bird')}} <br> {{__('home.reg_up_to')}} June 24<sup>th</sup>, 2025
-                                </th>
-                                <th>{{__('home.regular_reg')}} <br> {{__('home.reg_up_to')}} August 29<sup>th</sup>,
-                                    2025</th>
-                                <th>{{__('home.reg_late_onsite')}} <br> {{__('home.reg_start_from')}} August
-                                    30<sup>th</sup>, 2025</th>
+    </section>
 
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <!-- row 1 -->
-                            <tr>
-                                <th class="text-start">{{__('home.reg_specialist')}} </th>
-                                <td>{{__('home.reg_specialist_early')}}</td>
-                                <td>{{__('home.reg_specialist_regular')}}</td>
-                                <td>{{__('home.reg_specialist_late')}}</td>
-
-                            </tr>
-                            <tr>
-                                <th class="text-start">{{__('home.reg_resident_gp')}} </th>
-                                <td>{{__('home.reg_resident_early')}}</td>
-                                <td>{{__('home.reg_resident_regular')}}</td>
-                                <td>{{__('home.reg_resident_late')}}</td>
-
-                            </tr>
-
-                        </tbody>
-                    </table>
-                </div>
-                <div class="card-actions justify-end">
-                    <a href="https://expo2.virconex-id.com/registration/perhati2025" class="btn btn-primary"><i
-                            class="fa-regular fa-pen-to-square"></i> {{__('home.register')}}</a>
-                </div>
-            </div>
-        </div>
-        <div class="border-t-2 border-dashed mt-5">
-            <h1 class="uppercase font-semibold text-lg">Workshop</h1>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                @foreach ($registrations as $registrasi)
-                <div class="card w-full bg-price bg-perhati-50 max-w-sm  shadow-sm">
-                    <div class="card-body">
-                        <span class="badge  bg-perhati-400 border-none text-white">{{$registrasi->category}}</span>
-                        <p class="font-semibold text-xl">{{$registrasi->title}}</p>
-                        <div class="flex justify-center gap-3 border-t-2 mt-4">
-                            {!! str($registrasi->price)->markdown()->sanitizeHtml() !!}
-                            
-                        </div>
-                        <div class="mt-6 flex flex-col gap-2 text-sm">
-                            {!! str($registrasi->description)->markdown()->sanitizeHtml() !!}
+    {{-- @dd($regLocals) --}}
+    <section class="pt-10 pb-24 px-2 lg:px-5 bg-competition">
+        <!-- name of each tab group should be unique -->
+        <div class="tabs tabs-border justify-evenly">
+            <input type="radio" name="my_tabs_2" class="tab text-lg uppercase text-[#006a5f]"
+                aria-label="{{__('home.indonesia_participant')}}" checked="checked" />
+            <div class="tab-content">
+                <div class="pb-6 text-gray-500">
+                    {{-- <span class="bg-[#be124e] mt-5 text-green-600 px-3 py-2 text-sm rounded-xl ">Indonesian
+                        Participants</span> --}}
+                    @foreach ($uniqueLocals as $reg_category)
+                    @if ($reg_category == 'Symposium')
+                    <h2 class="uppercase font-semibold text-[#0A3542] mb-2 mt-5">{{$reg_category}}</h2>
+                    <div class="relative overflow-x-auto shadow sm:rounded-lg ">
+                        <table class="w-full text-sm text-left rtl:text-right text-gray-500 ">
+                            <thead class=" text-white uppercase text-center bg-[#006a5f] ">
+                                <tr>
+                                    <th scope="col" class="px-6 py-3">
+                                        {{__('home.reg_category')}}
+                                    </th>
+                                    <th scope="col" class="px-6 py-3">
+                                        {{__('home.reg_phase1')}}
+                                    </th>
+                                    <th scope="col" class="px-6 py-3">
+                                        {{__('home.reg_phase2')}}
+                                    </th>
+                                    
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach ($regLocals as $regLocal)
+                                @if ($regLocal->category == $reg_category)
+                                <tr class="bg-white border-b  border-gray-200 hover:bg-green-50 ">
+                                    <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
+                                        {{$regLocal->title}}
+                                    </th>
+                                    <td class="px-6 py-4 text-center">
+                                        IDR {{$regLocal->early_bird_reg != 0 ? number_format($regLocal->early_bird_reg,
+                                        0, ',', '.') : 'Free'}}
+                                    </td>
+                                    
+                                    <td class="px-6 py-4 text-center">
+                                        IDR {{$regLocal->onsite_reg != 0 ? number_format($regLocal->onsite_reg, 0, ',',
+                                        '.'): 'Free'}}
+                                    </td>
+                                </tr>
+                                @endif
+                                @endforeach
+                            </tbody>
+                        </table>
+                        <div class="relative mt-2">
+                            <a href="https://expo.virconex-id.com/registration/indorhino2026"
+                                class="bg-[#be124e] text-white hover:bg-[#970638] p-3 rounded-xl mb-3 float-end"><i
+                                    class="fa-solid fa-list mx-3"></i>{{__('home.register')}}</a>
                         </div>
                     </div>
+                    @elseif ($reg_category == 'workshop')
+                    <h2 class="uppercase font-semibold text-[#0A3542] mb-2 mt-5">{{$reg_category}}</h2>
+                    <div class="relative overflow-x-auto shadow sm:rounded-lg ">
+                        <table class="w-full text-sm text-left rtl:text-right text-gray-500 ">
+                            <thead class=" text-white uppercase text-center bg-[#006a5f] ">
+                                <tr>
+                                    <th scope="col" class="px-6 py-3">
+                                        Category
+                                    </th>
+                                    <th scope="col" class="px-6 py-3">
+                                        Registration Fee
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach ($regLocals as $regLocal)
+                                @if ($regLocal->category == $reg_category)
+                                <tr class="bg-white border-b  border-gray-200 hover:bg-green-50 ">
+                                    <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
+                                        {{$regLocal->title}}
+                                    </th>
+                                    <td class="px-6 py-4 text-center">
+                                        {{$regLocal->early_bird_reg != 0 ? 'IDR ' .
+                                        number_format($regLocal->early_bird_reg, 0, ',', '.') : ''}}
+                                    </td>
+
+                                </tr>
+                                @endif
+                                @endforeach
+                            </tbody>
+                        </table>
+                        <div class="relative mt-2">
+                            <a href="https://expo.virconex-id.com/registration/indorhino2026"
+                                class="bg-[#be124e] text-white hover:bg-[#be124e] p-3 rounded-xl mb-3 float-end"><i
+                                    class="fa-solid fa-list mx-3"></i>{{__('home.register')}}</a>
+                        </div>
+                    </div>
+                    @else
+                    <h2 class="uppercase font-semibold text-[#0A3542] mb-2 mt-5">{{$reg_category}}</h2>
+                    <div class="relative overflow-x-auto shadow sm:rounded-lg ">
+                        <table class="w-full text-sm text-left rtl:text-right text-gray-500 ">
+                            <thead class=" text-white uppercase text-center bg-[#006a5f] ">
+                                <tr>
+                                    <th scope="col" class="px-6 py-3">
+                                        Category
+                                    </th>
+                                    <th scope="col" class="px-6 py-3">
+                                        Other Surgeons / General Practitioners (GP)
+                                    </th>
+                                    <th scope="col" class="px-6 py-3">
+                                        Nurse / Medical Students
+                                    </th>
+
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach ($regLocals as $regLocal)
+                                @if ($regLocal->category == $reg_category)
+                                <tr class="bg-white border-b  border-gray-200 hover:bg-green-50 ">
+                                    <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
+                                        {{$regLocal->title}}
+                                    </th>
+                                    <td class="px-6 py-4 text-center">
+                                        {{$regLocal->early_bird_reg != 0 ? 'IDR ' . number_format($regLocal->early_bird_reg,
+                                        0, ',', '.') : ''}}
+                                    </td>
+                                    <td class="px-6 py-4 text-center">
+                                        {{$regLocal->normal_reg != 0 ? 'IDR' . number_format($regLocal->normal_reg, 0, ',',
+                                        '.') : ''}}
+                                    </td>
+
+                                </tr>
+                                @endif
+                                @endforeach
+                            </tbody>
+                        </table>
+                        <div class="relative mt-2">
+                            <a href="https://expo.virconex-id.com/registration/indorhino2026"
+                                class="bg-[#be124e] text-white hover:bg-[#be124e] p-3 rounded-xl mb-3 float-end"><i
+                                    class="fa-solid fa-list mx-3"></i>{{__('home.register')}}</a>
+                        </div>
+                    </div>
+                    @endif
+                    @endforeach
+
                 </div>
-                @endforeach
-                
             </div>
-            <div class="card-actions justify-end">
-                <a href="https://expo2.virconex-id.com/registration/perhati2025" class="btn btn-primary"><i
-                        class="fa-regular fa-pen-to-square"></i> {{__('home.register')}}</a>
+
+            <input type="radio" name="my_tabs_2" class="tab uppercase text-lg text-[#006a5f] "
+                aria-label="{{__('home.foreign_participant')}}" />
+            <div class="tab-content">
+                <div class="pb-6 text-gray-500">
+                    {{-- <span class="bg-[#be124e] text-green-600 px-3 py-2 text-sm rounded-xl mb-3">Foreign
+                        Participants</span> --}}
+                    @foreach ($uniqueForeigns as $reg_category)
+                    <h2 class="uppercase font-semibold text-[#0A3542] mb-2 mt-5">{{$reg_category}}</h2>
+                    <div class="relative overflow-x-auto shadow sm:rounded-lg">
+                        <table class="w-full text-sm text-left rtl:text-right text-gray-500 ">
+                            <thead class=" text-white uppercase text-center bg-[#006a5f] ">
+                                <tr>
+                                    <th scope="col" class="px-6 py-3">
+                                        {{__('home.reg_category')}}
+                                    </th>
+                                    <th scope="col" class="px-6 py-3">
+                                        {{__('home.reg_phase1')}}
+                                    </th>
+                                    <th scope="col" class="px-6 py-3">
+                                        {{__('home.reg_phase2')}}
+                                    </th>
+                                    
+
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach ($regForeigns as $regForeign)
+                                @if ($regForeign->category == $reg_category)
+                                <tr class="bg-white border-b  border-gray-200 hover:bg-green-50 ">
+                                    <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
+                                        {{$regForeign->title}}
+                                    </th>
+                                    <td class="px-6 py-4 text-center">
+                                        USD {{$regForeign->early_bird_reg != 0 ? $regForeign->early_bird_reg :
+                                        'Free'}}
+                                    </td>
+                                    
+                                    <td class="px-6 py-4 text-center">
+                                        USD {{$regForeign->onsite_reg != 0 ? $regForeign->onsite_reg : 'Free'}}
+                                    </td>
+                                </tr>
+                                @endif
+                                @endforeach
+                            </tbody>
+                        </table>
+                        <div class="relative mt-2">
+                            <a href="https://expo.virconex-id.com/registration/indorhino2026"
+                                class="bg-[#be124e] text-white hover:bg-[#be124e] p-3 rounded-xl mb-3 float-end"><i
+                                    class="fa-solid fa-list mx-3"></i>{{__('home.register')}}</a>
+                        </div>
+                    </div>
+                    @endforeach
+                </div>
             </div>
         </div>
-    </div>
+    </section>
 
-    <div class="bg-local pt-24 pb-52 lg:px-20 px-5 bg-blog" id="reg-info">
-        <div class="flex-col flex gap-3 mb-10">
-            <h4 class="text-2xl text-primary-600 font-semibold">{{ __('menu.registration') }}</h4>
-            <h1 class="text-4xl text-primary-700 font-semibold">{{ __('menu.registration_info') }}</h1>
+    <section class="px-2 lg:px-5 pb-16 bg-competition border-t border-dashed border-gray-200">
+        <div class=" mt-10">
+            <div class="text-center lg:text-start">
+                <h2 class="mb-2 uppercase text-3xl font-semibold">Registration
+                    <span class="text-[#006a5f]">information</span>
+                </h2>
+            </div>
+
+            <div>
+                <livewire:resources.reg-info />
+            </div>
         </div>
-
-        <livewire:resources.reg-info />
-        <!-- <div class="bg-white border border-gray-200 divide-y divide-gray-200 rounded-lg">
-            <details class="p-6 group" open>
-                <summary class="flex items-center justify-between cursor-pointer">
-                    <h5 class="text-xl font-semibold text-primary-900">
-                        Entitlements
-                    </h5>
-                    <span class="relative flex-shrink-0 ml-1.5 w-5 h-5">
-                        <i class="fa-solid fa-eye absolute inset-0 w-5 h-5 opacity-0 group-open:opacity-100"></i>
-                        <i class="fa-solid fa-eye-slash absolute inset-0 w-5 h-5 opacity-100 group-open:opacity-0"></i>
-                    </span>
-                </summary>
-
-                <p class="mt-4 leading-relaxed text-slate-500">
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ab hic veritatis
-                    molestias culpa in, recusandae laboriosam neque aliquid libero nesciunt
-                    voluptate dicta quo officiis explicabo consequuntur distinctio corporis
-                    earum similique!
-                </p>
-            </details>
-
-            <details class="p-6 group">
-                <summary class="flex items-center justify-between cursor-pointer">
-                    <h5 class="text-xl font-semibold text-primary-900">
-                        Registration Fee
-                    </h5>
-
-                    <span class="relative flex-shrink-0 ml-1.5 w-5 h-5">
-                        <i class="fa-solid fa-eye absolute inset-0 w-5 h-5 opacity-0 group-open:opacity-100"></i>
-                        <i class="fa-solid fa-eye-slash absolute inset-0 w-5 h-5 opacity-100 group-open:opacity-0"></i>
-                    </span>
-                </summary>
-
-                <p class="mt-4 leading-relaxed text-slate-500">
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ab hic veritatis
-                    molestias culpa in, recusandae laboriosam neque aliquid libero nesciunt
-                    voluptate dicta quo officiis explicabo consequuntur distinctio corporis
-                    earum similique!
-                </p>
-            </details>
-
-            <details class="p-6 group">
-                <summary class="flex items-center justify-between cursor-pointer">
-                    <h5 class="text-xl font-semibold text-primary-900">
-                        Cancellation Policy of Registration
-                    </h5>
-
-                    <span class="relative flex-shrink-0 ml-1.5 w-5 h-5">
-                        <i class="fa-solid fa-eye absolute inset-0 w-5 h-5 opacity-0 group-open:opacity-100"></i>
-                        <i class="fa-solid fa-eye-slash absolute inset-0 w-5 h-5 opacity-100 group-open:opacity-0"></i>
-                    </span>
-                </summary>
-
-                <p class="mt-4 leading-relaxed text-slate-500">
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ab hic veritatis
-                    molestias culpa in, recusandae laboriosam neque aliquid libero nesciunt
-                    voluptate dicta quo officiis explicabo consequuntur distinctio corporis
-                    earum similique!
-                </p>
-            </details>
-        </div> -->
-
-    </div>
-
-
+    </section>
 </div>

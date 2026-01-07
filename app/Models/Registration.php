@@ -14,20 +14,32 @@ class Registration extends Model
         'title',
         'category',
         'description',
-        'price'
+        'price',
+        'wilayah_reg',
+        'early_bird_reg',
+        'normal_reg',
+        'onsite_reg',
     ];
 
     public array $translatable = [
         'title',
         'category',
         'description',
-        'price'
+        'price',
+        'wilayah_reg',
+        'early_bird_reg',
+        'normal_reg',
+        'onsite_reg',
     ];
 
     public $casts = [
         'title' => 'array',
         'category' => 'array',
         'description' => 'array',
-        'price' => 'array'
+        'price' => 'array',
+        'wilayah_reg' => 'array',
+        'early_bird_reg' => 'array',
+        'normal_reg' => 'array',
+        'onsite_reg' => 'array',
     ];
 }

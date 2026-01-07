@@ -23,4 +23,7 @@ return [
     'room_type' => 'Room Type',
     'book_now' => 'Book Now',
     'reservation_info' => 'Hotel Information',
+    'visit' => 'Visiting',
+    'visit_venue' => 'Conference Venue',
+    'social_program' => 'Social Program',
 ];

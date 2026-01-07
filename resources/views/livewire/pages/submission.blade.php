@@ -1,39 +1,45 @@
-<div class="bg-slate-50">
-    <div class="bg-local pt-20 pb-52 lg:px-20 px-5 bg-blog" id="guideline-abstract">
-        <div class="flex-col flex gap-3 mb-10">
-            <h4 class="text-2xl text-primary font-semibold">{{ __('menu.submission') }}</h4>
-            <h1 class="text-4xl text-primary font-semibold">{{ __('menu.guide-abstract') }}</h1>
+<div>
+    <section class="breadcrumbs relative pb-0">
+        <div class="absolute inset-0 bg-gradient-to-t from-[#D9F9F5]/10 to-[#015149]/80"></div>
+        <div class="py-16 lg:py-28 text-center relative">
+            <h2 class="text-white uppercase text-2xl font-semibold tracking-wide lg:text-4xl">{{__('menu.submission')}}</h2>
         </div>
-        <div class="bg-base-100 border border-gray-200 divide-y divide-gray-200 rounded-lg">
-            @foreach ($guidelines as $guide)
-                <details class="p-6 group"  {{ $loop->first ? 'open' : '' }}>
-                    <summary class="flex items-center justify-between cursor-pointer">
-                        <h5 class="text-xl font-semibold text-primary">
-                            {{ $guide->title }}
-                        </h5>
-                        <span class="relative flex-shrink-0 ml-1.5 w-5 h-5">
-                            <i class="fa-solid fa-eye absolute inset-0 w-5 h-5 opacity-0 group-open:opacity-100"></i>
-                            <i
-                                class="fa-solid fa-eye-slash absolute inset-0 w-5 h-5 opacity-100 group-open:opacity-0"></i>
-                        </span>
-                    </summary>
-                    <p class="mt-4 leading-relaxed text-slate-500 list-disc px-10">
-                        {!! $guide->description !!}
-                    </p>
-                    
-                </details>
-            @endforeach
-        </div>
-    </div>
+    </section>
 
-    <div class="pt-28 pb-52 lg:px-20 px-5 bg-slate-200" id="submission">
-        <div class="flex-col flex gap-3 mb-10">
-            <h4 class="text-2xl text-primary font-semibold">{{ __('menu.submission') }}</h4>
-            <h1 class="text-4xl text-primary font-semibold">{{__('menu.abstract')}}</h1>
-        </div>
+    <section class="pt-10 pb-24 px-2 lg:px-5">
+        <div class="flex flex-col lg:flex-row gap-8 justify-between items-center">
+            <div class="lg:w-2/3 w-full">
+                <div class="">
+                    <div class="text-center md:text-start mb-5">
+                        <p class="mb-1 text-[#006a5f]">{{__('menu.submission')}}</p>
+                        <h2 class="mb-0 uppercase text-4xl font-bold">{{ __('menu.guide-abstract') }} </h2>
+                        <!-- <p>Abstract Free Paper</p> -->
+                    </div>
 
-        <div>
-            <embed class="w-full h-[1500px] md:h-[1000px] rounded-lg" src="https://expo.virconex-id.com/abstract/perhati2025/" type="text/html">
+                    <div>
+                        @foreach ($guidelines as $abstract)
+                        <div class="collapse collapse-plus bg-base-100 border border-base-300">
+                            <input type="radio" name="my-accordion-3" />
+                            <div class="collapse-title font-semibold">{{ $abstract->title }}</div>
+                            <div class="collapse-content text-gray-500 text-sm">{!! str($abstract->description)->markdown()->sanitizeHtml() !!}</div>
+                        </div>
+                        @endforeach
+                    </div>
+                </div>
+            </div>
+            <div class="w-full lg:w-1/3">
+                <div class="p-10 bg-base-100 rounded-lg shadow-md ">
+                    <div class="mb-4">
+                        <h2 class="text-4xl font-semibold tracking-wide mb-2"> {{__('home.online_submission')}}</h2>
+                        <p class="m-0 text-xs text-gray-500 italic">{{__('home.note_online_submission')}}</p>
+                    </div>
+                    <div class="w-full flex text-center">
+                        <a href="https://expo.virconex-id.com/abstract/indorhino2026/index.php/upload_abstract" class="btn rounded-xl bg-[#be124e] text-white hover:bg-[#be124e] w-full"><i class="fa-solid fa-upload me-1"></i> Submit Abstract</a>
+
+                    </div>
+                </div>
+            </div>
         </div>
-    </div>
+    </section>
+    
 </div>

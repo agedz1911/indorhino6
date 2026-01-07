@@ -7,6 +7,7 @@ use App\Filament\Resources\RegistrationResource\RelationManagers;
 use App\Models\Registration;
 use Filament\Forms;
 use Filament\Forms\Components\MarkdownEditor;
+use Filament\Forms\Components\Select;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Form;
 use Filament\Resources\Concerns\Translatable;
@@ -29,8 +30,25 @@ class RegistrationResource extends Resource
     {
         return $form
             ->schema([
+                Select::make('category')
+                    ->options([
+                        'Symposium' => 'Symposium',
+                        'Workshop' => 'Workshop',
+                    ])
+                    ->native(false),
+                Select::make('wilayah_reg')
+                    ->options([
+                        'indonesia' => 'indonesia',
+                        'foreign' => 'foreign',
+                    ])
+                    ->native(false),
                 TextInput::make('title'),
-                TextInput::make('category'),
+                TextInput::make('early_bird_reg')
+                    ->numeric(),
+                TextInput::make('normal_reg')
+                    ->numeric(),
+                TextInput::make('onsite_reg')
+                    ->numeric(),
                 MarkdownEditor::make('description'),
                 MarkdownEditor::make('price'),
             ]);
@@ -62,7 +80,7 @@ class RegistrationResource extends Resource
                 Tables\Actions\CreateAction::make(),
             ]);
     }
-    
+
     public static function getRelations(): array
     {
         return [
@@ -74,7 +92,7 @@ class RegistrationResource extends Resource
     // {
     //     return ['en', 'id'];
     // }
-    
+
     public static function getPages(): array
     {
         return [
@@ -82,5 +100,5 @@ class RegistrationResource extends Resource
             'create' => Pages\CreateRegistration::route('/create'),
             'edit' => Pages\EditRegistration::route('/{record}/edit'),
         ];
-    }    
+    }
 }

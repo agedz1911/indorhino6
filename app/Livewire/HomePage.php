@@ -11,7 +11,7 @@ use Livewire\Component;
 
 
 // *global title
-#[Title('Home - KONAS XX PERHATI-KL')]
+#[Title('Home - 6th INDORHINO Congress')]
 
 
 // class HomePage extends Component

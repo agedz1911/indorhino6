@@ -1,27 +1,27 @@
 <!-- Header -->
-<header class="bg-gradient-to-r from-[#fcf9f2] to-[#fcf9f2] hidden lg:block text-white text-sm py-2">
+<header class="bg-gradient-to-r from-[#006a5f] via-[#e5b777] to-[#006a5f] hidden lg:block text-white text-sm py-2">
     <div class="mx-auto flex justify-between items-center px-4">
         <div>
-            <span class="text-xs text-[#b77104]">
-                Get in Touch On:
+            <span class="text-xs">
+                {{__('home.get_contact')}}
             </span>
-            <a class="btn btn-sm hover:bg-[#be124e] bg-[#b77104] shadow-none" href="mailto:apfsrm2026bali@pharma-pro.com">
+            <a class="btn btn-sm bg-[#be124e] shadow-none hover:bg-[#930d3c] border-0" href="mailto:apfsrm2026bali@pharma-pro.com">
                 <i class="fa fa-envelope text-white">
                 </i>
             </a>
-            <a class="btn btn-sm hover:bg-[#be124e] bg-[#b77104] shadow-none" href="https://wa.me/+62816995230" target="_blankx`">
+            <a class="btn btn-sm bg-[#be124e] shadow-none hover:bg-[#930d3c] border-0" href="https://wa.me/+62816995230" target="_blankx`">
                 <i class="fa fa-whatsapp text-white">
                 </i>
             </a>
-            <a class="btn btn-sm hover:bg-[#be124e] bg-[#b77104] shadow-none" href="#">
+            <a class="btn btn-sm bg-[#be124e] shadow-none hover:bg-[#930d3c] border-0" href="#">
                 <i class="fa fa-instagram text-white">
                 </i>
             </a>
         </div>
         <div onclick="contact.showModal()"
-            class="btn btn-outline rounded-lg hover:bg-[#8af2f3] bg-[#b77104] shadow-none">
+            class="btn text-white rounded-lg hover:bg-[#930d3c] bg-[#be124e] border-0 shadow-none">
             <i class="fa-solid fa-circle-info"></i>
-            Contact
+            {{__('menu.contact_us')}}
         </div>
     </div>
 </header>
