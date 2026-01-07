@@ -162,7 +162,7 @@
                     </div>
                     @endforeach
                 </div>
-                <a href="/congress-information#welcome-remarks"
+                <a href="/welcome-message"
                     class="btn btn-outline bg-[#be124e] hover:text-slate-950 text-white border-0 rounded-lg text-center w-full md:w-1/5">{{__('home.read_more')}}
                     <i class="fa-solid fa-angles-right"></i></a>
             </div>
