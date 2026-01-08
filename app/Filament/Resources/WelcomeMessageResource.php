@@ -40,6 +40,12 @@ class WelcomeMessageResource extends Resource
                 TextInput::make('no_urut')->numeric(),
                 Toggle::make('is_active'),
                 FileUpload::make('image')
+                    ->downloadable()
+                    ->reorderable()
+                    ->panelLayout('grid')
+                    ->image()
+                    ->imageEditor()
+                    ->multiple()
                     ->directory('welcomeMessage'),
                 MarkdownEditor::make('description')
             ]);

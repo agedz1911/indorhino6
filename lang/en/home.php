@@ -69,4 +69,6 @@ No refund for cancellation received afterward',
     'reg_phase2' => 'Phase 2 up until onsite',
     'online_submission' => 'Online Submission',
     'note_online_submission' => '*make sure the file complies with the guidelines.',
+    'message_chairman' => 'Chairperson of the Organizing Committee',
+    'message_study' => 'Chairperson of Rhinology Study Group Indonesia',
 ];

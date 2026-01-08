@@ -67,4 +67,6 @@ Tidak ada pengembalian dana untuk pembatalan yang diterima setelahnya',
     'reg_phase2' => 'Tahap 2 sampai dengan tanggal acara',
     'online_submission' => 'Pengiriman Daring',
     'note_online_submission' => '*pastikan file sesuai dengan pedoman.',
+    'message_chairman' => 'Ketua Panitia Penyelenggara',
+    'message_study' => 'Ketua Kelompok Studi Rhinologi Indonesia',
 ];
