@@ -1,7 +1,7 @@
 <div class="relative">
     {{-- Start Hero --}}
 
-    <section class="hero min-h-screen mb-0 bg-[#03b7a2] bg-[url('assets/images/bg2.png')]">
+    <section class="hero min-h-screen mb-0 bg-[#05e3fc] bg-[url('assets/images/bg2.png')]">
         <div class="hero-overlay bg-opacity-20"></div>
         <div class="hero-content">
             <div class="z-10 relative pt-10 md:pt-14 lg:pt-32 flex flex-col md:flex-row items-start justify-between">
@@ -9,7 +9,7 @@
                     <livewire:resources.flayer />
                 </div>
                 <div class="px-5 order-1 lg:order-1 w-full max-w-xl">
-                    <img src="assets/images/logo/logo-2.png" class="w-full max-w-sm rounded-xl" alt="Banner">
+                    <img src="assets/images/logo/logo-all.png" class="w-full max-w-sm rounded-xl" alt="Banner">
                     <div class="flex text-start w-fit relative mt-5">
                         <h1 class="text-2xl lg:text-3xl text-[#be124e] font-semibold">
                             {{ __('home.title')}}
@@ -38,25 +38,25 @@
     <div class="md:-mt-20 mb-20 lg:mb-40 container mx-auto">
         <div class="grid grid-cols-2  md:grid-cols-4 justify-items-center px-3 w-full gap-2  mt-5 md:mt-8"
             id="countdown">
-            <div class="card lg:w-3/4 w-full bg-gradient-to-b from-[#e5b777]  to-[#006a5f] text-white shadow-xl">
+            <div class="card lg:w-3/4 w-full bg-gradient-to-b from-[#ebc17d]  to-[#008795] text-white shadow-xl">
                 <div class="card-body">
                     <h2 class="card-title text-4xl justify-center" id="days"></h2>
                     <p class="text-center">{{__('home.counter_day')}}</p>
                 </div>
             </div>
-            <div class="card bg-gradient-to-b from-[#e5b777]  to-[#006a5f] lg:w-3/4 w-full text-white shadow-xl">
+            <div class="card bg-gradient-to-b from-[#ebc17d]  to-[#008795] lg:w-3/4 w-full text-white shadow-xl">
                 <div class="card-body">
                     <h2 class="card-title text-4xl justify-center" id="hours"></h2>
                     <p class="text-center">{{__('home.counter_hour')}}</p>
                 </div>
             </div>
-            <div class="card bg-gradient-to-b from-[#e5b777]  to-[#006a5f] lg:w-3/4 w-full text-white shadow-xl">
+            <div class="card bg-gradient-to-b from-[#ebc17d]  to-[#008795] lg:w-3/4 w-full text-white shadow-xl">
                 <div class="card-body">
                     <h2 class="card-title text-4xl justify-center" id="mins"></h2>
                     <p class="text-center">{{__('home.counter_minute')}}</p>
                 </div>
             </div>
-            <div class="card bg-gradient-to-b from-[#e5b777]  to-[#006a5f] lg:w-3/4 w-full text-white shadow-xl">
+            <div class="card bg-gradient-to-b from-[#ebc17d]  to-[#008795] lg:w-3/4 w-full text-white shadow-xl">
                 <div class="card-body">
                     <h2 class="card-title text-4xl justify-center" id="secs"></h2>
                     <p class="text-center">{{__('home.counter_second')}}</p>
@@ -75,7 +75,7 @@
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div class="w-full px-3 md:px-8">
                 <div class="w-full pt-5">
-                    <img src="assets/images/logo/logo-2.png" class="w-full max-w-sm rounded-xl" alt="Banner">
+                    <img src="assets/images/logo/logo-all.png" class="w-full max-w-sm rounded-xl" alt="Banner">
                     <div class="flex text-start w-fit relative mt-5">
                         <h1 class="text-2xl lg:text-3xl text-[#be124e] font-semibold">
                             {{ __('home.title')}}
@@ -119,10 +119,10 @@
     <section class="py-24 px-4 mb-10 bg-amber-50/30">
         <div class="container mx-auto items-center">
             <div class="flex items-center justify-between">
-                <div class="badge bg-[#006a5f] px-8 py-6 rounded-2xl">
+                <div class="badge bg-[#008795] px-8 py-6 rounded-2xl">
                     <h1 class="text-2xl text-white font-semibold">{{__('menu.remarks')}}</h1>
                 </div>
-                <i class="fa-regular text-[#006a5f] fa-message text-5xl"></i>
+                <i class="fa-regular text-[#008795] fa-message text-5xl"></i>
             </div>
             <div class="flex flex-col items-center">
                 <div class="pt-20 pb-10 justify-center flex md:items-center lg:items-start flex-col lg:flex-row gap-5">
@@ -148,7 +148,7 @@
                         </div>
                         @else
                         <div class="">
-                            <div class="w-full md:w-20 rounded-md bg-gradient-to-b from-[#006a5f] to-[#edf8f7]">
+                            <div class="w-full md:w-20 rounded-md bg-gradient-to-b from-[#008795] to-[#edf8f7]">
                                 <img src="{{ asset('storage/' . $item) }}"
                                     class="object-cover w-full md:w-20 rounded-lg" alt="{{ $message->name }}" />
                             </div>
@@ -165,8 +165,8 @@
                                         href="/welcome-message">{{__('home.read_more')}}</a>
                                 </div>
                                 <div class="card-actions mt-3">
-                                    <p class="font-bold text-[#006a5f]">- Dr. dr. Luh Putu Lusy Indrawati, M.Kes, Sp.THT-KL(K) <br> <span class="text-[#be124e]">{{__('home.message_chairman')}}</span></p>
-                                    <p class="font-bold text-[#006a5f]">- dr. Vicky Riyadi Sp.T.H.T.B.K.L., Subsp.Rino.(K). <br> <span class="text-[#be124e]">{{__('home.message_study')}}</span> </p>
+                                    <p class="font-bold text-[#008795]">- Dr. dr. Luh Putu Lusy Indrawati, M.Kes, Sp.THT-KL(K) <br> <span class="text-[#be124e]">{{__('home.message_chairman')}}</span></p>
+                                    <p class="font-bold text-[#008795]">- dr. Vicky Riyadi Sp.T.H.T.B.K.L., Subsp.Rino.(K). <br> <span class="text-[#be124e]">{{__('home.message_study')}}</span> </p>
                                 </div>
                             </div>
                         </div>
@@ -182,7 +182,7 @@
 
     <section class="py-24 px-4 mb-10 bg-competition">
         <div class="flex flex-col items-center">
-            <div class="badge bg-[#006a5f] rounded-lg p-6 mb-5">
+            <div class="badge bg-[#008795] rounded-lg p-6 mb-5">
                 <h1 class="text-2xl text-white uppercase font-semibold">{{__('home.sponsorlist')}}</h1>
             </div>
             <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 mt-5">
@@ -191,7 +191,7 @@
                     <a href="{{$sponsor->website ? $sponsor->website : 'javascript:void(0)'}}">
                         {!! $sponsor->logo ? '<img src="' . asset('storage/' . $sponsor->logo) . '"
                             class="w-full hover:scale-110 hover:ease-out" alt="' . $sponsor->company . '" />' : '<p
-                            class="text-center text-[#006a5f] text-sm">' . $sponsor->company . '</p>' !!}
+                            class="text-center text-[#008795] text-sm">' . $sponsor->company . '</p>' !!}
                     </a>
                 </div>
                 @endforeach
@@ -206,17 +206,17 @@
     </section>
 
     {{-- Start Map --}}
-    <div class="border-t-2 border-dashed border-[#006a5f]/50"></div>
+    <div class="border-t-2 border-dashed border-[#008795]/50"></div>
     <div class="flex items-center justify-between mb-10 px-5 lg:px-20 mt-12">
-        <div class="badge bg-[#006a5f] p-8">
+        <div class="badge bg-[#008795] p-8">
             <h1 class="text-2xl text-white font-semibold">{{__('menu.visit_venue')}}</h1>
         </div>
-        <i class="fa-solid text-[#006a5f] fa-location-dot text-5xl"></i>
+        <i class="fa-solid text-[#008795] fa-location-dot text-5xl"></i>
     </div>
 
     <div class="flex flex-col lg:flex-row gap-4 px-5 lg:px-20">
         <div class="lg:w-4/12 w-full">
-            <div class="card w-full bg-[#007e6f] text-[#006a5f] pt-5 pb-5">
+            <div class="card w-full bg-[#036772] text-[#008795] pt-5 pb-5">
                 <div class="card-body text-white">
                     <div class="flex flex-col mb-4">
                         <h4 class="title text-2xl font-bold">{{__('menu.visit_venue')}}:</h4>

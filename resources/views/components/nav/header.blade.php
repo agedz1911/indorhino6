@@ -1,5 +1,5 @@
 <!-- Header -->
-<header class="bg-gradient-to-r from-[#006a5f] via-[#e5b777] to-[#006a5f] hidden lg:block text-white text-sm py-2">
+<header class="bg-gradient-to-r from-[#008795] via-[#edd089] to-[#008795] hidden lg:block text-white text-sm py-2">
     <div class="mx-auto flex justify-between items-center px-4">
         <div>
             <span class="text-xs">

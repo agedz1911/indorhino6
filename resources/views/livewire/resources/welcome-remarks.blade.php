@@ -1,6 +1,6 @@
 <div>
     <section class="breadcrumbs relative pb-0">
-        <div class="absolute inset-0 bg-gradient-to-t from-[#D9F9F5]/10 to-[#015149]/80"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-[#D9F9F5]/10 to-[#008795]/80"></div>
         <div class="py-16 lg:py-28 text-center relative">
             <h2 class="text-white uppercase text-2xl font-semibold tracking-wide lg:text-4xl">{{__('menu.remarks')}}
             </h2>
@@ -37,7 +37,7 @@
                         @endforeach
                     </figure>
                     <div class="card-body">
-                        <h2 class="card-title text-[#006a5f]">
+                        <h2 class="card-title text-[#008795]">
                             {{ $message->name }}
                         </h2>
                         <p class="absolute top-2 right-3 text-[#be124e] font-medium">{!! $message->title !!} </p>
@@ -72,7 +72,7 @@
                         </div>
                     </figure>
                     <div class="card-body">
-                        <h2 class="card-title text-[#006a5f]">
+                        <h2 class="card-title text-[#008795]">
                             Dr. dr. Luh Putu Lusy Indrawati, M.Kes, Sp.THT-KL(K)
                         </h2>
                         <p class=" text-[#be124e] font-medium">{{__('home.message_chairman')}} </p>
@@ -87,7 +87,7 @@
                         </div>
                     </figure>
                     <div class="card-body">
-                        <h2 class="card-title text-[#006a5f]">
+                        <h2 class="card-title text-[#008795]">
                             dr. Vicky Riyadi Sp.T.H.T.B.K.L., Subsp.Rino.(K).
                         </h2>
                         <p class="text-[#be124e] font-medium">{{__('home.message_study')}}</p>

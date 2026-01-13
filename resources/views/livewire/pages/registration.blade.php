@@ -1,6 +1,6 @@
 <div>
     <section class="breadcrumbs relative pb-0">
-        <div class="absolute inset-0 bg-gradient-to-t from-[#D9F9F5]/10 to-[#015149]/80"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-[#D9F9F5]/10 to-[#008795]/80"></div>
         <div class="py-16 lg:py-28 text-center relative">
             <h2 class="text-white uppercase text-2xl font-semibold tracking-wide lg:text-4xl">{{__('menu.registration_fee')}}</h2>
         </div>
@@ -10,7 +10,7 @@
     <section class="pt-10 pb-24 px-2 lg:px-5 bg-competition">
         <!-- name of each tab group should be unique -->
         <div class="tabs tabs-border justify-evenly">
-            <input type="radio" name="my_tabs_2" class="tab text-lg uppercase text-[#006a5f]"
+            <input type="radio" name="my_tabs_2" class="tab text-lg uppercase text-[#008795]"
                 aria-label="{{__('home.indonesia_participant')}}" checked="checked" />
             <div class="tab-content">
                 <div class="pb-6 text-gray-500">
@@ -21,7 +21,7 @@
                     <h2 class="uppercase font-semibold text-[#0A3542] mb-2 mt-5">{{$reg_category}}</h2>
                     <div class="relative overflow-x-auto shadow sm:rounded-lg ">
                         <table class="w-full text-sm text-left rtl:text-right text-gray-500 ">
-                            <thead class=" text-white uppercase text-center bg-[#006a5f] ">
+                            <thead class=" text-white uppercase text-center bg-[#008795] ">
                                 <tr>
                                     <th scope="col" class="px-6 py-3">
                                         {{__('home.reg_category')}}
@@ -66,7 +66,7 @@
                     <h2 class="uppercase font-semibold text-[#0A3542] mb-2 mt-5">{{$reg_category}}</h2>
                     <div class="relative overflow-x-auto shadow sm:rounded-lg ">
                         <table class="w-full text-sm text-left rtl:text-right text-gray-500 ">
-                            <thead class=" text-white uppercase text-center bg-[#006a5f] ">
+                            <thead class=" text-white uppercase text-center bg-[#008795] ">
                                 <tr>
                                     <th scope="col" class="px-6 py-3">
                                         Category
@@ -103,7 +103,7 @@
                     <h2 class="uppercase font-semibold text-[#0A3542] mb-2 mt-5">{{$reg_category}}</h2>
                     <div class="relative overflow-x-auto shadow sm:rounded-lg ">
                         <table class="w-full text-sm text-left rtl:text-right text-gray-500 ">
-                            <thead class=" text-white uppercase text-center bg-[#006a5f] ">
+                            <thead class=" text-white uppercase text-center bg-[#008795] ">
                                 <tr>
                                     <th scope="col" class="px-6 py-3">
                                         Category
@@ -150,7 +150,7 @@
                 </div>
             </div>
 
-            <input type="radio" name="my_tabs_2" class="tab uppercase text-lg text-[#006a5f] "
+            <input type="radio" name="my_tabs_2" class="tab uppercase text-lg text-[#008795] "
                 aria-label="{{__('home.foreign_participant')}}" />
             <div class="tab-content">
                 <div class="pb-6 text-gray-500">
@@ -160,7 +160,7 @@
                     <h2 class="uppercase font-semibold text-[#0A3542] mb-2 mt-5">{{$reg_category}}</h2>
                     <div class="relative overflow-x-auto shadow sm:rounded-lg">
                         <table class="w-full text-sm text-left rtl:text-right text-gray-500 ">
-                            <thead class=" text-white uppercase text-center bg-[#006a5f] ">
+                            <thead class=" text-white uppercase text-center bg-[#008795] ">
                                 <tr>
                                     <th scope="col" class="px-6 py-3">
                                         {{__('home.reg_category')}}
@@ -211,7 +211,7 @@
         <div class=" mt-10">
             <div class="text-center lg:text-start">
                 <h2 class="mb-2 uppercase text-3xl font-semibold">Registration
-                    <span class="text-[#006a5f]">information</span>
+                    <span class="text-[#008795]">information</span>
                 </h2>
             </div>
 
