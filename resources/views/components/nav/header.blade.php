@@ -34,8 +34,8 @@
             <div class="navbar">
                 <div class="navbar-start">
                     <div class="flex items-center gap-1">
-                        <img src="assets/images/logo/logo-event.png" class="h-full max-h-12" alt="Logo" />
-                        <p class="text-white text-lg font-semibold">Indorhino</p>
+                        <img src="assets/images/logo/logo-event-new.png" class="h-full max-h-12" alt="Logo" />
+                        {{-- <p class="text-white text-lg font-semibold">Indorhino</p> --}}
                     </div>
                 </div>
                 <div class="navbar-center hidden lg:flex py-2">
@@ -111,8 +111,8 @@
             <ul class="bg-base-200 min-h-full w-80 p-4">
                 <!-- Sidebar content here -->
                 <div class="flex items-center gap-1 mb-5">
-                    <img src="assets/images/logo/logo-event.png" class="h-full max-h-14" alt="Logo" />
-                    <p class="text-[#be124e] text-xl font-semibold">Indorhino</p>
+                    <img src="assets/images/logo/logo-event-new.png" class="h-full max-h-14" alt="Logo" />
+                    {{-- <p class="text-[#be124e] text-xl font-semibold">Indorhino</p> --}}
                 </div>
                 <x-nav.menu-mobile />
             </ul>

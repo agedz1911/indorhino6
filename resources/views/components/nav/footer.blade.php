@@ -5,10 +5,7 @@
         <a href="">
             <div
                 class="flex flex-col md:flex-row text-start mb-4 w-full items-center justify-center transition-transform duration-300 gap-4">
-                <div class="flex items-center">
-                    <img src="assets/images/logo/logo-event.png" alt="Logo" class="h-full max-h-14 mr-2" />
-                    <h1 class="lg:text-4xl text-2xl text-white font-semibold">Indorhino</h1>
-                </div>
+                <img src="assets/images/logo/logo-event-new.png" alt="Logo" class="h-full max-h-20 mr-2" />
                 <img src="assets/images/logo/logo-all.png" alt="Logo" class="w-72" />
             </div>
         </a>
