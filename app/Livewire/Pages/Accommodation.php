@@ -6,7 +6,7 @@ use App\Models\accommodation as ModelsAccommodation;
 use Livewire\Attributes\Title;
 use Livewire\Component;
 
-#[Title('Accommodation - KONAS XX PERHATI-KL')]
+#[Title('Accommodation - 6th INDORHINO Congress')]
 class Accommodation extends Component
 {
     public function render()

@@ -63,7 +63,7 @@
             {{__('menu.visit')}} <i class="fa-solid fa-angle-down"></i></div>
         <ul tabindex="0" class="dropdown-content menu bg-base-100 rounded-box gap-2 w-60 p-2 shadow-sm">
             <li>
-                <a href="#" wire:navigate
+                <a href="{{route('visiting')}}" wire:navigate
                     class="{{ request()->is('visiting') ? 'text-[#be124e]' : '' }} justify-between hover:text-[#be124e]">
                     Yogyakarta <i class="fa-solid fa-angle-right"></i></a>
             </li>

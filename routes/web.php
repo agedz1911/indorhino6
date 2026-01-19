@@ -24,12 +24,13 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', HomePage::class);
-Route::get('/welcome-message', WelcomeRemarks::class);
-Route::get('/organizing-committee', Committee::class);
+Route::get('/', HomePage::class)->name('homepage');
+Route::get('/welcome-message', WelcomeRemarks::class)->name('welcome-message');
+Route::get('/organizing-committee', Committee::class)->name('committee');
 Route::get('/sponsor', Sponsor::class)->name('sponsor');
-Route::get('/submission', Submission::class);
-Route::get('/registration', Registration::class);
+Route::get('/submission', Submission::class)->name('submission');
+Route::get('/registration', Registration::class)->name('registration');
+Route::get('/visiting', Visiting::class)->name('visiting');
 
 // Route::prefix('/congress-information')->group(function () {
 //     Route::get('/', CongressInformation::class);

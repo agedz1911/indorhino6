@@ -6,7 +6,7 @@ use App\Models\Visiting as ModelsVisiting;
 use Livewire\Attributes\Title;
 use Livewire\Component;
 
-#[Title('Visiting - KONAS XX PERHATI-KL')]
+#[Title('Visiting - 6th INDORHINO Congress')]
 
 class Visiting extends Component
 {

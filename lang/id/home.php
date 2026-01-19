@@ -69,4 +69,8 @@ Tidak ada pengembalian dana untuk pembatalan yang diterima setelahnya',
     'note_online_submission' => '*pastikan file sesuai dengan pedoman.',
     'message_chairman' => 'Ketua Panitia Penyelenggara',
     'message_study' => 'Ketua Kelompok Studi Rhinologi Indonesia',
+    'welcome_to' => 'Selamat Datang di',
+    'about_jogja' => 'Yogyakarta (Jogja/Yogya) adalah sebuah provinsi istimewa di Jawa Tengah yang dikenal sebagai Kota Pelajar (banyak universitas), Kota Budaya (pusat kebudayaan Jawa dengan Keraton (Istana Prambanan), Taman Sari (Istana Air Taman Sari), dan Candi Prambanan), dan destinasi wisata unggulan Indonesia dengan julukan seperti Kota Gudeg (Kota Gudeg). Kota ini juga berfungsi sebagai ibu kota sementara Republik Indonesia. Daerah Istimewa Yogyakarta (DIY) mempunyai sejarah yang unik karena dukungannya yang kuat terhadap Proklamasi Kemerdekaan sehingga mendapat status istimewa dan saat ini berada di bawah kepemimpinan Sri Sultan Hamengkubuwono I.',
+    'visit_cultural' => 'Hiburan dan Tempat Budaya',
+    'visit_culinary' => 'Kenikmatan Kuliner',
 ];

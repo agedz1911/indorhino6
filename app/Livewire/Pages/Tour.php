@@ -6,7 +6,7 @@ use App\Models\tour as ModelsTour;
 use Livewire\Attributes\Title;
 use Livewire\Component;
 
-#[Title('Tour - KONAS XX PERHATI-KL')]
+#[Title('Tour - 6th INDORHINO Congress')]
 class Tour extends Component
 {
     public $tours;

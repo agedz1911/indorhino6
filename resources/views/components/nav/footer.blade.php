@@ -5,8 +5,8 @@
         <a href="">
             <div
                 class="flex flex-col md:flex-row text-start mb-4 w-full items-center justify-center transition-transform duration-300 gap-4">
-                <img src="assets/images/logo/logo-event-new.png" alt="Logo" class="h-full max-h-20 mr-2" />
-                <img src="assets/images/logo/logo-all.png" alt="Logo" class="w-72" />
+                <img src="{{asset('assets/images/logo/logo-event-new-2.png')}}" alt="Logo" class="h-full max-h-20 mr-2" />
+                <img src="{{asset('assets/images/logo/logo-all.png')}}" alt="Logo" class="w-72" />
             </div>
         </a>
 
@@ -60,7 +60,7 @@
                     <li class="text-sm font-normal hover:text-amber-400 hover:underline"><a wire:navigate
                             href="/registration">{{__('menu.registration')}}</a></li>
                     <li class="text-sm font-normal hover:text-amber-400 hover:underline"><a wire:navigate
-                            href="#">{{__('menu.visit')}}</a></li>
+                            href="{{route('visiting')}}">{{__('menu.visit')}}</a></li>
                 </ul>
             </div>
         </div>

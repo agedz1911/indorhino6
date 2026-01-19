@@ -47,7 +47,7 @@ class VisitingResource extends Resource
                 FileUpload::make('image')
                     ->label('Images')
                     ->helperText(new HtmlString('<small style="color:red; "><sup>*</sup><i>Max 3Mb</i></small>'))
-                    ->maxSize(2048)
+                    ->maxSize(3048)
                     ->downloadable()
                     ->reorderable()
                     ->panelLayout('grid')

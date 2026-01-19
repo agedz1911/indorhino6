@@ -6,7 +6,7 @@ use App\Models\Sponsor as ModelsSponsor;
 use Livewire\Attributes\Title;
 use Livewire\Component;
 
-#[Title('Sponsors - KONAS XX PERHATI-KL')]
+#[Title('Sponsors - 6th INDORHINO Congress')]
 class Sponsor extends Component
 {
     public function render()

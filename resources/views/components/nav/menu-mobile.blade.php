@@ -43,7 +43,7 @@
                 <i class="fa-solid fa-angle-right"></i></a>
         </li>
         <li>
-            <a href="#" wire:navigate
+            <a href="{{route('visiting')}}" wire:navigate
                 class="{{ request()->is('visiting') ? 'text-[#be124e]' : '' }} justify-between font-normal hover:text-[#be124e] after:content-[''] relative after:absolute flex items-center hover:after:items-center transition-all after:transition-all duration-300 after:duration-300 after:bg-[#be124e] hover:ps-3 after:left-0 after:h-0 hover:after:h-[5px] after:w-0 hover:after:w-[5px] after:rounded-full">Yogyakarta
                 <i class="fa-solid fa-angle-right"></i></a>
         </li>

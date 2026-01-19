@@ -6,7 +6,7 @@ use Livewire\Component;
 use Livewire\Attributes\Title;
 
 
-#[Title('Congress Information - KONAS XX PERHATI-KL')]
+#[Title('Congress Information - 6th INDORHINO Congress')]
 
 class CongressInformation extends Component
 {    
