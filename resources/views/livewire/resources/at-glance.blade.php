@@ -1,4 +1,10 @@
 <div>
+    <section class="breadcrumbs relative pb-0">
+        <div class="absolute inset-0 bg-gradient-to-t from-[#D9F9F5]/10 to-[#008795]/80"></div>
+        <div class="py-16 lg:py-28 text-center relative">
+            <h2 class="text-white uppercase text-2xl font-semibold tracking-wide lg:text-4xl">{{__('menu.atglance')}}</h2>
+        </div>
+    </section>
     <div class="flex items-center justify-center">
         <div x-data="{ openTab: 3 }" class="lg:w-11/12 w-full mx-auto">
             <div class="">

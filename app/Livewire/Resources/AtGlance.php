@@ -17,7 +17,7 @@ class AtGlance extends Component
     public function mount()
     {
         $atglances = ModelsAtGlance::all();
-        $this->duadelapan = $atglances->where('date', '2025-10-28')->sortBy('no_urut');
+        $this->duadelapan = $atglances->where('date', '2026-06-04')->sortBy('no_urut');
         $this->duasembilan = $atglances->where('date', '2025-10-29')->sortBy('no_urut');
         $this->tigapuluh = $atglances->where('date', '2025-10-30')->sortBy('no_urut');
         $this->tigapuluhsatu = $atglances->where('date', '2025-10-31')->sortBy('no_urut');

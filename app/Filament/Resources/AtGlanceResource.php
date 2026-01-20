@@ -31,7 +31,7 @@ class AtGlanceResource extends Resource
 
     protected static ?string $navigationIcon = 'heroicon-o-clipboard-document-check';
     protected static ?string $modelLabel = 'Program at Glance';
-    protected static ?string $navigationGroup = 'Front End Components';
+    protected static ?string $navigationGroup = 'Schedule Fix';
 
     public static function form(Form $form): Form
     {

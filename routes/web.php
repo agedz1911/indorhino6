@@ -9,7 +9,9 @@ use App\Livewire\Pages\Sponsor;
 use App\Livewire\Pages\Submission;
 use App\Livewire\Pages\Tour;
 use App\Livewire\Pages\Visiting;
+use App\Livewire\Resources\AtGlance;
 use App\Livewire\Resources\Committee;
+use App\Livewire\Resources\Faculty;
 use App\Livewire\Resources\WelcomeRemarks;
 use Illuminate\Support\Facades\Route;
 
@@ -31,6 +33,8 @@ Route::get('/sponsor', Sponsor::class)->name('sponsor');
 Route::get('/submission', Submission::class)->name('submission');
 Route::get('/registration', Registration::class)->name('registration');
 Route::get('/visiting', Visiting::class)->name('visiting');
+Route::get('/faculties', Faculty::class)->name('faculties');
+Route::get('/program-at-glance', AtGlance::class);
 
 // Route::prefix('/congress-information')->group(function () {
 //     Route::get('/', CongressInformation::class);
