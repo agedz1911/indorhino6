@@ -7,7 +7,7 @@
     </section>
     <section class="pt-10 pb-24 px-5 lg:px-8 bg-base-100">
         <div class="w-full px-3 mb-5 lg:mb-10">
-            <label class="input input-bordered flex items-center gap-2">
+            <label class="input input-bordered flex items-center gap-2 w-full">
                 <input wire:model.live.debounce.500ms="searchTerm" type="text" class="border-none w-full focus:border-none"
                     placeholder="Search Faculties" />
                 <i class="fa-solid fa-search opacity-50"></i>
@@ -18,7 +18,7 @@
             @foreach ($faculties as $faculty)
             <button class="hover:shadow-lg hover:rounded-xl"
                 onclick="fac{{$loop->index}}.showModal()">
-                <div class="card card-compact bg-[#D9F9F5]/20 ring-[#D9F9F5] ring-offset-base-100 ring-2 ring-offset-2">
+                <div class="card card-compact bg-[#D9F9F5]/20 ring-[#edd089] ring-offset-base-100 ring-2 ring-offset-2">
                     <figure class="">
                         @if($faculty->getMedia('images')->isEmpty())
                         <div class="avatar p-3">
@@ -42,8 +42,7 @@
                             {{$faculty->name}}
                         </h2>
                         <p class="">{{$faculty->country}}</p>
-                        <p class="text-xs italic text-amber-500 absolute bottom-1 right-3">{{$faculty->email ? '*' .
-                        $faculty->email : ''}}</p>
+                        <p class="text-xs italic text-amber-500 text-start">{{$faculty->cv}}</p>
                     </div>
                 </div>
             </button>
@@ -71,11 +70,12 @@
                         <div>
                             <h3 class="text-lg font-bold">{{$faculty->name}}</h3>
                             <p class="">{{$faculty->country}}</p>
+                            <p class="text-xs text-gray-500">{{$faculty->cv}}</p>
                         </div>
                     </div>
                     <div class="pt-5">
                         @foreach ($faculty->schedules as $schedule)
-                        <div class="flex flex-wrap font-semibold gap-5 text-green-600">
+                        <div class="flex flex-wrap font-semibold gap-5 text-[#be124e]">
                             <p>{{\Carbon\Carbon::parse($schedule->glance->date)->format('d
                             F Y')}}</p>
                             <p>{{$schedule->time_speaker}}</p>

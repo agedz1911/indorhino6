@@ -56,7 +56,7 @@
                     <li class="text-sm font-normal hover:text-amber-400 hover:underline"><a wire:navigate
                             href="#">{{__('menu.faculty')}}</a></li>
                     <li class="text-sm font-normal hover:text-amber-400 hover:underline"><a wire:navigate
-                            href="#">{{__('menu.schedule')}}</a></li>
+                            href="{{route('program-at-glance')}}">{{__('menu.schedule')}}</a></li>
                     <li class="text-sm font-normal hover:text-amber-400 hover:underline"><a wire:navigate
                             href="/registration">{{__('menu.registration')}}</a></li>
                     <li class="text-sm font-normal hover:text-amber-400 hover:underline"><a wire:navigate

@@ -3,10 +3,13 @@
 namespace App\Livewire\Resources;
 
 use App\Models\Faculty as ModelsFaculty;
+use Livewire\Attributes\Title;
 use Livewire\Component;
 use Livewire\WithoutUrlPagination;
 use Livewire\WithPagination;
 
+
+#[Title('Faculties - 6th INDORHINO Congress')]
 class Faculty extends Component
 {
     use WithPagination, WithoutUrlPagination;

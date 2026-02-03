@@ -1,15 +1,21 @@
 <div>
+    <section class="breadcrumbs relative pb-0">
+        <div class="absolute inset-0 bg-gradient-to-t from-[#D9F9F5]/10 to-[#008795]/80"></div>
+        <div class="py-16 lg:py-28 text-center relative">
+            <h2 class="text-white uppercase text-2xl font-semibold tracking-wide lg:text-4xl">{{__('menu.schedule')}}</h2>
+        </div>
+    </section>
+
+    
     <div class="px-5 lg:px-10 mt-10">
-        <label class="input input-ghost flex items-center gap-2 border-2 border-primary w-full">
+        <label class="input input-lg input-ghost flex items-center gap-2 border-2 border-accent w-full">
             <i class="fa fa-search opacity-45 text-sm"></i>
             <input wire:model.live='search' type="text" class="grow border-none"
                 placeholder="Search Topic, Speaker, Room" />
         </label>
     </div>
 
-
-
-    <section>
+    <section class="pt-10 pb-24 px-2 lg:px-5">
         <div class="flex flex-col lg:flex-row justify-between gap-4">
 
             <div class="drawer drawer-end block lg:hidden z-30">
@@ -17,7 +23,7 @@
                 <div class="drawer-content">
                     <!-- Page content here -->
                     <label for="my-drawer-4"
-                        class="drawer-button btn bg-purple-700 hover:bg-indigo-600 text-white rounded-lg px-3"><i
+                        class="drawer-button btn bg-[#008795] hover:bg-accent text-white rounded-lg px-3"><i
                             class="fa-solid fa-filter"></i> Filter</label>
                 </div>
                 <div class="drawer-side">
@@ -26,24 +32,7 @@
                         <!-- Sidebar content here -->
                         <div class="my-auto">
                             <h2 class="card-title">Filter</h2>
-                            <label class="form-control w-full max-w-xs">
-                                <div class="label">
-                                    <span class="label-text">Date</span>
-                                    <span class="label-text-alt">Alt label</span>
-                                </div>
-                                <select class="select select-bordered">
-                                    <option disabled selected>Pick one</option>
-                                    <option>Star Wars</option>
-                                    <option>Harry Potter</option>
-                                    <option>Lord of the Rings</option>
-                                    <option>Planet of the Apes</option>
-                                    <option>Star Trek</option>
-                                </select>
-                                <div class="label">
-                                    <span class="label-text-alt">Alt label</span>
-                                    <span class="label-text-alt">Alt label</span>
-                                </div>
-                            </label>
+                            
                             <fieldset class="fieldset p-4 bg-base-100 border border-base-300 rounded-box w-64">
                                 <legend class="fieldset-legend">Date</legend>
                                 <div class="flex items-center">
@@ -86,14 +75,14 @@
                             <span class="label-text">Date</span>
                         </div>
                         <div class="flex items-center">
-                            <select wire:model.live='date' class="select select-bordered border-2 border-primary">
+                            <select wire:model.live='date' class="select select-bordered border-2 border-accent">
                                 <option value="0">Choose a date</option>
                                 @foreach ($uniqDates as $date)
                                 <option value="{{ $date }}">{{ \Carbon\Carbon::parse($date)->format('d F Y') }}</option>
                                 @endforeach
                             </select>
                             @if($date)
-                            <button wire:click="resetDate" class="btn  btn-secondary ml-2">X</button>
+                            <button wire:click="resetDate" class="btn btn-sm btn-error ml-2">X</button>
                             @endif
                         </div>
                     </label>
@@ -102,14 +91,14 @@
                             <span class="label-text">Session</span>
                         </div>
                         <div class="flex items-center">
-                            <select wire:model.live='category' class="select select-bordered border-2 border-primary">
+                            <select wire:model.live='category' class="select select-bordered border-2 border-accent">
                                 <option value="0">Choose a Session</option>
                                 @foreach ($uniqCategories as $item)
                                 <option value="{{ $item }}">{{ $item }}</option>
                                 @endforeach
                             </select>
                             @if($date)
-                            <button wire:click="resetCategory" class="btn btn-secondary ml-2">X</button>
+                            <button wire:click="resetCategory" class="btn btn-sm btn-error ml-2">X</button>
                             @endif
                         </div>
                     </label>
@@ -121,8 +110,9 @@
             <div class="w-full lg:w-3/4 order-2 lg:order-1">
                 @foreach ($uniqDates as $date)
                 <div class="text-center lg:text-start border-t border-dashed pt-2">
-                    <h2 class="text-lg font-semibold uppercase text-primary tracking-wider">
-                        {{\Carbon\Carbon::parse($date)->format('l, d F')}}</h2>
+                    <h2 class="text-lg font-bold uppercase tracking-wider">
+                        {{\Carbon\Carbon::parse($date)->format('l, d F')}}
+                    </h2>
                 </div>
                 @foreach ($uniqCategories as $item)
                 {{-- @if (
@@ -136,21 +126,21 @@
                 )
                 @endif --}}
                 <p class="font-semibold tracking-wider my-5"><i
-                        class="fa fa-angle-right text-sm text-perhati-2 00 font-semibold"></i> {{$item}}</p>
+                        class="fa fa-angle-right text-sm text-[#008795] font-semibold"></i> {{$item}}</p>
                 @foreach ($atglances as $atglance)
                 @if ($atglance->category_sesi == $item && $atglance->date == $date)
                 <div class="card card-compact bg-base-100 w-full shadow">
 
                     <div class="card-body">
-                        <p>{{$atglance->title}} - <span class="text-xs"><i class="fa fa-map-marker text-[#9E1F63]"></i>
+                        <p>{{$atglance->title}} - <span class="text-xs"><i class="fa fa-map-marker text-[#008795]"></i>
                                 {{$atglance->room}} </span></p>
                         <div class="flex flex-wrap justify-between gap-4 items-start">
                             <div>
                                 <p class="mb-1">
                                     <span class="font-semibold">Session:</span> {{$atglance->title_ses}}
                                 </p>
-                                <p class="mb-2"><i class="fa fa-clock text-[#9E1F63]"></i> {{$atglance->time}} | <i
-                                        class="fa fa-map-marker text-[#9E1F63]"></i> {{$atglance->room}}</p>
+                                <p class="mb-2"><i class="fa fa-clock text-[#008795]"></i> {{$atglance->time}} | <i
+                                        class="fa fa-map-marker text-[#008795]"></i> {{$atglance->room}}</p>
                             </div>
                             <div>
                                 {{$atglance->category_sesi}}
@@ -160,11 +150,11 @@
                                         {{$atglance->panelist}}</span></p> --}}
                             </div>
                         </div>
-                        <div class="overflow-x-auto sm:rounded-lg mt-4 border-t border-dashed border-purple-200">
+                        <div class="overflow-x-auto sm:rounded-lg mt-4 border-t border-dashed border-sky-200">
                             <table class="table table-md">
                                 <tbody>
                                     @foreach ($atglance->schedules as $schedule)
-                                    <tr class="border-b border-gray-200 hover:bg-purple-50">
+                                    <tr class="border-b border-gray-200 hover:bg-sky-50">
                                         <td>
                                             <p>{{$schedule->time_speaker}}</p>
                                         </td>

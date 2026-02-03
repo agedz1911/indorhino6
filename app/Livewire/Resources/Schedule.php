@@ -5,8 +5,11 @@ namespace App\Livewire\Resources;
 use App\Models\AtGlance;
 use App\Models\ScheduleSession;
 use App\Models\ScientificSchedule;
+use Livewire\Attributes\Title;
 use Livewire\Component;
 
+
+#[Title('Scientific Schedule - 6th INDORHINO Congress')]
 class Schedule extends Component
 {
 

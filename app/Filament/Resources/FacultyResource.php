@@ -9,9 +9,11 @@ use Filament\Forms;
 use Filament\Forms\Components\FileUpload;
 use Filament\Forms\Components\Select;
 use Filament\Forms\Components\SpatieMediaLibraryFileUpload;
+use Filament\Forms\Components\Textarea;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Components\Toggle;
 use Filament\Forms\Form;
+use Filament\Resources\Concerns\Translatable;
 use Filament\Resources\Resource;
 use Filament\Tables;
 use Filament\Tables\Actions\ActionGroup;
@@ -25,6 +27,7 @@ use Illuminate\Database\Eloquent\SoftDeletingScope;
 
 class FacultyResource extends Resource
 {
+    use Translatable;
     protected static ?string $model = Faculty::class;
     // protected static ?string $modelLabel = 'Type';
     protected static ?string $navigationGroup = 'Front End Components';
@@ -64,7 +67,8 @@ class FacultyResource extends Resource
                 Toggle::make('is_active')->required()->inline()->default(true),
                 TextInput::make('no_urut')
                     ->numeric()
-                    ->required()
+                    ->required(),
+                Textarea::make('cv')
             ]);
     }
 
@@ -77,7 +81,8 @@ class FacultyResource extends Resource
                 SpatieMediaLibraryImageColumn::make('image')
                     ->collection('images'),
                 IconColumn::make('is_active')->boolean()->sortable(),
-                TextColumn::make('type_participants.name')->label('Participated')
+                TextColumn::make('type_participants.name')->label('Participated'),
+                TextColumn::make('cv')
             ])
             ->filters([
                 // Filter::make('type_participant.name')
@@ -104,6 +109,11 @@ class FacultyResource extends Resource
         return [
             //
         ];
+    }
+
+    public static function getTranslatableLocales(): array
+    {
+        return ['en', 'id'];
     }
 
     public static function getPages(): array
