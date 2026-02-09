@@ -18,7 +18,7 @@
                     class="{{ request()->is('organizing-committee') ? 'text-[#be124e]' : '' }} justify-between hover:text-[#be124e] ">{{__('menu.committee')}} <i class="fa-solid fa-angle-right"></i></a>
             </li>
             <li>
-                <a href="#" wire:navigate
+                <a href="{{route('faculties')}}" wire:navigate
                     class="{{ request()->is('faculties') ? 'text-[#be124e]' : '' }} justify-between hover:text-[#be124e] ">{{__('menu.faculty')}}
                     <i class="fa-solid fa-angle-right"></i></a>
             </li>

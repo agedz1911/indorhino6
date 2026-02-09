@@ -16,35 +16,35 @@
         @if (count($faculties) > 0)
         <div class="flex flex-wrap justify-between items-start gap-4">
             @foreach ($faculties as $faculty)
-            <button class="hover:shadow-xl hover:rounded-xl"
+            <button class="hover:shadow-lg hover:shadow-cyan-700/50 transition-all duration-300"
                 onclick="fac{{$loop->index}}.showModal()">
-            <div class="card card-compact bg-[#D9F9F5]/20 ring-[#008795] ring-offset-base-100 ring-2 ring-offset-2 w-full max-w-xs">
-                <figure class="">
-                    @if($faculty->getMedia('images')->isEmpty())
-                    <div class="avatar p-3">
-                        <div class="">
-                            <img src="{{ asset('images/speakers.jpg') }}" alt="Default Doctor Image"
-                                class="rounded-md" />
+                <div class="card card-compact bg-[#D9F9F5]/20 ring-[#008795] ring-offset-base-100 ring-2 ring-offset-2 w-full md:max-w-xs">
+                    <figure class="">
+                        @if($faculty->getMedia('images')->isEmpty())
+                        <div class="avatar p-3">
+                            <div class="">
+                                <img src="{{ asset('images/speakers.jpg') }}" alt="Default Doctor Image"
+                                    class="rounded-md" />
+                            </div>
                         </div>
-                    </div>
-                    @else
-                    @foreach($faculty->getMedia('images') as $image)
-                    <div class="avatar p-3">
-                        <div class="rounded-md">
-                            <img src="{{ $image->getUrl() }}" alt="{{$faculty->name}}" />
+                        @else
+                        @foreach($faculty->getMedia('images') as $image)
+                        <div class="avatar p-3">
+                            <div class="rounded-md">
+                                <img src="{{ $image->getUrl() }}" alt="{{$faculty->name}}" />
+                            </div>
                         </div>
+                        @endforeach
+                        @endif
+                    </figure>
+                    <div class="card-body pt-0 flex flex-col justify-between">
+                        <h2 class="card-title text-[#be124e] hover:cursor-pointer">
+                            {{$faculty->name}} <span class="text-sm">({{$faculty->country}})</span>
+                        </h2>
+                        <p class="text-xs italic text-justify line-clamp-3">{{$faculty->cv}} </p>
+                        <p class="text-end hover:underline hover:text-[#be124e] hover:cursor-pointer">{{__('home.read_more')}}...</p>
                     </div>
-                    @endforeach
-                    @endif
-                </figure>
-                <div class="card-body pt-0 flex flex-col justify-between">
-                    <h2 class="card-title text-[#be124e] hover:cursor-pointer">
-                        {{$faculty->name}} <span class="text-sm">({{$faculty->country}})</span>
-                    </h2>
-                    <p class="text-xs italic text-justify line-clamp-3">{{$faculty->cv}} </p>
-                    <p class="text-end hover:underline hover:text-[#be124e] hover:cursor-pointer">{{__('home.read_more')}}...</p>
                 </div>
-            </div>
             </button>
             <dialog id="fac{{$loop->index}}" class="modal">
                 <div class="modal-box w-11/12 max-w-4xl">
