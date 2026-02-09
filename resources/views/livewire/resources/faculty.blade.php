@@ -39,8 +39,9 @@
                     </figure>
                     <div class="card-body pt-0 flex flex-col justify-between">
                         <h2 class="card-title text-[#be124e] hover:cursor-pointer">
-                            {{$faculty->name}} <br> <span class="text-sm">({{$faculty->country}})</span>
+                            {{$faculty->name}} 
                         </h2>
+                        <span class="text-sm text-[#be124e] hover:cursor-pointer text-start">({{$faculty->country}})</span>
                         <p class="text-xs italic text-justify line-clamp-3">{{$faculty->cv}} </p>
                         <p class="text-end hover:underline hover:text-[#be124e] hover:cursor-pointer">{{__('home.read_more')}}...</p>
                     </div>
