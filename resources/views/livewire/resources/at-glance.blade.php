@@ -197,7 +197,12 @@
                     </div>
                 </div>
             </div>
-
+            <div class="px-4 md:px-10 mt-10">   
+                <p class="text-sm text-error italic">
+                    Note: <br>
+                    The scientific schedule is provisional and may be adjusted as required.
+                </p>
+            </div>
         </div>
     </section> --}}
     <section class="pt-10 pb-24 px-2 lg:px-5">
@@ -207,6 +212,12 @@
                 <img src="{{asset('assets/images/atglance.jpg')}}" class="w-full" alt="Shoes" />
             </figure>
             
+        </div>
+        <div class="mt-10">
+            <p class="text-sm text-error italic">
+                Note: <br>
+                The scientific schedule is provisional and may be adjusted as required.
+            </p>
         </div>
     </section>
 </div>
