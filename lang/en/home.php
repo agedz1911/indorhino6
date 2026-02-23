@@ -75,4 +75,6 @@ No refund for cancellation received afterward',
     'about_jogja' => 'Yogyakarta (Jogja/Yogya) is a special province in Central Java, known as a Student City (numerous universities), a Cultural City (center of Javanese culture with the Keraton (Prambanan Palace), Taman Sari (Taman Sari Water Castle), and Prambanan Temple), and a leading Indonesian tourist destination with nicknames such as the City of Gudeg (Gudeg City). It also served as the temporary capital of the Republic of Indonesia. The Special Region of Yogyakarta (DIY) has a unique history due to its strong support for the Proclamation of Independence, earning it special status, and is currently under the leadership of Sri Sultan Hamengkubuwono I.',
     'visit_cultural' => 'Entertainment and Cultural Landmark',
     'visit_culinary' => 'Culinary Delight',
+    'note' => 'Note',
+    'note_detail_schedule' => 'The scientific schedule is provisional and may be adjusted as required.',
 ];
