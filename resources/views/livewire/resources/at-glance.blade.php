@@ -47,177 +47,177 @@
                                             @if ($labFk->room == 'Skill Lab FK Universitas Mataram')
                                             <button class="hover:shadow-sm hover:shadow-[#edd089] block w-full"
                                                 onclick="labFk28{{$loop->index}}.showModal()">
-                                                <div class="apx-0 py-4 w-full rounded-md bg-[{{$labFk->color}}]">
-                                                    {{$labFk->time}} <br>
-                                                    {{$labFk->title}}
-                                                </div>
-                                            </button>
-                                            @endif
+    <div class="apx-0 py-4 w-full rounded-md bg-[{{$labFk->color}}]">
+        {{$labFk->time}} <br>
+        {{$labFk->title}}
+    </div>
+    </button>
+    @endif
 
-                                            <dialog id="labFk28{{$loop->index}}" class="modal">
-                                                <div class="modal-box w-11/12 max-w-5xl text-start">
-                                                    <div class="flex justify-between mb-3">
-                                                        <div class="text-start">
-                                                            <h3 class="mb-0">Date: <span class="">
-                                                                    {{\Carbon\Carbon::parse($labFk->date)->format('d F
+    <dialog id="labFk28{{$loop->index}}" class="modal">
+        <div class="modal-box w-11/12 max-w-5xl text-start">
+            <div class="flex justify-between mb-3">
+                <div class="text-start">
+                    <h3 class="mb-0">Date: <span class="">
+                            {{\Carbon\Carbon::parse($labFk->date)->format('d F
                                                                     Y')}}</span></h3>
-                                                            <h3 class="mb-0">Time: <span class="">
-                                                                    {{$labFk->time}}</span></h3>
-                                                        </div>
-                                                        <div>
-                                                            <p class="">Room :<span class="">
-                                                                    {{$labFk->room}}
-                                                                </span>
-                                                            </p>
-                                                        </div>
-                                                    </div>
-                                                    <p class="mb-0">Session : <span class="">
-                                                            {{$labFk->title}}</span></p>
-                                                    <p class="">Moderator : <span class="">
-                                                            {{$labFk->moderator}}
-                                                        </span></p>
-                                                    <div class="overflow-x-auto mt-5">
-                                                        <table class="table">
-                                                            <!-- head -->
-                                                            <thead>
-                                                                <tr>
-                                                                    <th style="width: 18%">Time</th>
-                                                                    <th>Topic</th>
-                                                                    <th>Speaker</th>
-                                                                </tr>
-                                                            </thead>
-                                                            <tbody>
-                                                                @foreach ($labFk->schedules as $schedule)
-                                                                <tr>
-                                                                    <th scope="row">{{$schedule->time_speaker}}</th>
-                                                                    <td>{{$schedule->topic_title}}</td>
-                                                                    <td>{{$schedule->speaker}}</td>
-                                                                </tr>
-                                                                @endforeach
-                                                            </tbody>
-                                                        </table>
-                                                    </div>
-                                                    <div class="modal-action">
-                                                        <form method="dialog">
-                                                            <button class="btn">Close</button>
-                                                        </form>
-                                                    </div>
-                                                </div>
-                                            </dialog>
-                                            @endforeach
-                                        </td>
-                                        <td>
-                                            @foreach ($duadelapan as $pln)
-                                            @if ($pln->room == 'PLN')
-                                            <button class="hover:shadow-lg hover:shadow-perhati-800 block w-full"
-                                                onclick="pln28{{$loop->index}}.showModal()">
-                                                <div class="border px-0 py-4 w-full rounded-md bg-[{{$pln->color}}]">
-                                                    {{$pln->time}} <br>
-                                                    {{$pln->title}}
-                                                </div>
-                                            </button>
-                                            @endif
-                                            <dialog id="pln28{{$loop->index}}" class="modal">
-                                                <div class="modal-box w-11/12 max-w-5xl text-start">
-                                                    <div class="flex justify-between mb-3">
-                                                        <div class="text-start">
-                                                            <h3 class="mb-0">Date: <span class="">
-                                                                    {{\Carbon\Carbon::parse($pln->date)->format('d F
-                                                                    Y')}}</span></h3>
-                                                            <h3 class="mb-0">Time: <span class="">
-                                                                    {{$pln->time}}</span></h3>
-                                                        </div>
-                                                        <div>
-                                                            <p class="">Room :<span class="">
-                                                                    {{$pln->room}}
-                                                                </span>
-                                                            </p>
-                                                        </div>
-                                                    </div>
-                                                    <p class="mb-0">Session : <span class="">
-                                                            {{$pln->title}}</span></p>
-                                                    <p class="">Moderator : <span class="">
-                                                            {{$pln->moderator}}
-                                                        </span></p>
-                                                    <div class="overflow-x-auto mt-5">
-                                                        <table class="table">
-                                                            <thead>
-                                                                <tr>
-                                                                    <th style="width: 18%">Time</th>
-                                                                    <th>Topic</th>
-                                                                    <th>Speaker</th>
-                                                                </tr>
-                                                            </thead>
-                                                            <tbody>
-                                                                @foreach ($pln->schedules as $schedule)
-                                                                <tr>
-                                                                    <th scope="row">{{$schedule->time_speaker}}</th>
-                                                                    <td>{{$schedule->topic_title}}</td>
-                                                                    <td>{{$schedule->speaker}}</td>
-                                                                </tr>
-                                                                @endforeach
-                                                            </tbody>
-                                                        </table>
-                                                    </div>
-                                                    <div class="modal-action">
-                                                        <form method="dialog">
-                                                            <button class="btn">Close</button>
-                                                        </form>
-                                                    </div>
-                                                </div>
-                                            </dialog>
-                                            @endforeach
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-
-                    <div x-show="openTab === 2"
-                        class="transition-all duration-300 bg-white p-4 rounded-lg shadow-md border-x-4 border-[#be124e]">
-
-                        tab 2
-                    </div>
-
-                    <div x-show="openTab === 3"
-                        class="transition-all duration-300 bg-white p-4 rounded-lg shadow-md border-x-4 border-[#be124e]">
-
-                        tab 3
-                    </div>
-                    <div x-show="openTab === 4"
-                        class="transition-all duration-300 bg-white p-4 rounded-lg shadow-md border-x-4 border-[#be124e]">
-
-                        tab 4
-                    </div>
-                    <div x-show="openTab === 5"
-                        class="transition-all duration-300 bg-white p-4 rounded-lg shadow-md border-x-4 border-[#be124e]">
-
-                        tab 5
-                    </div>
+                    <h3 class="mb-0">Time: <span class="">
+                            {{$labFk->time}}</span></h3>
+                </div>
+                <div>
+                    <p class="">Room :<span class="">
+                            {{$labFk->room}}
+                        </span>
+                    </p>
                 </div>
             </div>
-            <div class="px-4 md:px-10 mt-10">   
-                <p class="text-sm text-error italic">
-                    Note: <br>
-                    The scientific schedule is provisional and may be adjusted as required.
-                </p>
+            <p class="mb-0">Session : <span class="">
+                    {{$labFk->title}}</span></p>
+            <p class="">Moderator : <span class="">
+                    {{$labFk->moderator}}
+                </span></p>
+            <div class="overflow-x-auto mt-5">
+                <table class="table">
+                    <!-- head -->
+                    <thead>
+                        <tr>
+                            <th style="width: 18%">Time</th>
+                            <th>Topic</th>
+                            <th>Speaker</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach ($labFk->schedules as $schedule)
+                        <tr>
+                            <th scope="row">{{$schedule->time_speaker}}</th>
+                            <td>{{$schedule->topic_title}}</td>
+                            <td>{{$schedule->speaker}}</td>
+                        </tr>
+                        @endforeach
+                    </tbody>
+                </table>
+            </div>
+            <div class="modal-action">
+                <form method="dialog">
+                    <button class="btn">Close</button>
+                </form>
             </div>
         </div>
-    </section> --}}
-    <section class="pt-10 pb-24 px-2 lg:px-5">
-        <span class="italic text-gray-500 text-xs">*tentative {{__('menu.atglance')}}</span>
-        <div class="card bg-base-100 w-full shadow">
-            <figure>
-                <img src="{{asset('assets/images/atglance.jpg')}}" class="w-full" alt="Shoes" />
-            </figure>
-            
-        </div>
-        <div class="mt-10">
-            <p class="text-sm text-error italic">
-                Note: <br>
-                The scientific schedule is provisional and may be adjusted as required.
-            </p>
-        </div>
-    </section>
+    </dialog>
+    @endforeach
+    </td>
+    <td>
+        @foreach ($duadelapan as $pln)
+        @if ($pln->room == 'PLN')
+        <button class="hover:shadow-lg hover:shadow-perhati-800 block w-full"
+            onclick="pln28{{$loop->index}}.showModal()">
+            <div class="border px-0 py-4 w-full rounded-md bg-[{{$pln->color}}]">
+                {{$pln->time}} <br>
+                {{$pln->title}}
+            </div>
+        </button>
+        @endif
+        <dialog id="pln28{{$loop->index}}" class="modal">
+            <div class="modal-box w-11/12 max-w-5xl text-start">
+                <div class="flex justify-between mb-3">
+                    <div class="text-start">
+                        <h3 class="mb-0">Date: <span class="">
+                                {{\Carbon\Carbon::parse($pln->date)->format('d F
+                                                                    Y')}}</span></h3>
+                        <h3 class="mb-0">Time: <span class="">
+                                {{$pln->time}}</span></h3>
+                    </div>
+                    <div>
+                        <p class="">Room :<span class="">
+                                {{$pln->room}}
+                            </span>
+                        </p>
+                    </div>
+                </div>
+                <p class="mb-0">Session : <span class="">
+                        {{$pln->title}}</span></p>
+                <p class="">Moderator : <span class="">
+                        {{$pln->moderator}}
+                    </span></p>
+                <div class="overflow-x-auto mt-5">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th style="width: 18%">Time</th>
+                                <th>Topic</th>
+                                <th>Speaker</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach ($pln->schedules as $schedule)
+                            <tr>
+                                <th scope="row">{{$schedule->time_speaker}}</th>
+                                <td>{{$schedule->topic_title}}</td>
+                                <td>{{$schedule->speaker}}</td>
+                            </tr>
+                            @endforeach
+                        </tbody>
+                    </table>
+                </div>
+                <div class="modal-action">
+                    <form method="dialog">
+                        <button class="btn">Close</button>
+                    </form>
+                </div>
+            </div>
+        </dialog>
+        @endforeach
+    </td>
+    </tr>
+    </tbody>
+    </table>
+</div>
+</div>
+
+<div x-show="openTab === 2"
+    class="transition-all duration-300 bg-white p-4 rounded-lg shadow-md border-x-4 border-[#be124e]">
+
+    tab 2
+</div>
+
+<div x-show="openTab === 3"
+    class="transition-all duration-300 bg-white p-4 rounded-lg shadow-md border-x-4 border-[#be124e]">
+
+    tab 3
+</div>
+<div x-show="openTab === 4"
+    class="transition-all duration-300 bg-white p-4 rounded-lg shadow-md border-x-4 border-[#be124e]">
+
+    tab 4
+</div>
+<div x-show="openTab === 5"
+    class="transition-all duration-300 bg-white p-4 rounded-lg shadow-md border-x-4 border-[#be124e]">
+
+    tab 5
+</div>
+</div>
+</div>
+<div class="px-4 md:px-10 mt-10">
+    <p class="text-sm text-error italic">
+        Note: <br>
+        The scientific schedule is provisional and may be adjusted as required.
+    </p>
+</div>
+</div>
+</section> --}}
+<section class="pt-10 pb-24 px-2 lg:px-5">
+    <span class="italic text-gray-500 text-xs">*tentative {{__('menu.atglance')}}</span>
+    <div class="card bg-base-100 w-full shadow">
+        <figure>
+            <img src="{{asset('assets/images/atglance.jpg')}}" class="w-full" alt="Shoes" />
+        </figure>
+
+    </div>
+    <div class="mt-10">
+        <p class="text-sm text-error italic">
+            {{__('home.note')}}: <br>
+            {{__('home.note_detail_schedule')}}
+        </p>
+    </div>
+</section>
 </div>

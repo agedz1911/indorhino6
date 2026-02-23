@@ -6,7 +6,7 @@
         </div>
     </section>
 
-    
+
     <div class="px-5 lg:px-10 mt-10">
         <label class="input input-lg input-ghost flex items-center gap-2 border-2 border-accent w-full">
             <i class="fa fa-search opacity-45 text-sm"></i>
@@ -32,7 +32,7 @@
                         <!-- Sidebar content here -->
                         <div class="my-auto">
                             <h2 class="card-title">Filter</h2>
-                            
+
                             <fieldset class="fieldset p-4 bg-base-100 border border-base-300 rounded-box w-64">
                                 <legend class="fieldset-legend">Date</legend>
                                 <div class="flex items-center">
@@ -180,8 +180,8 @@
         </div>
         <div class="mt-10">
             <p class="text-sm text-error italic">
-                Note: <br>
-                The scientific schedule is provisional and may be adjusted as required.
+                {{__('home.note')}}: <br>
+                {{__('home.note_detail_schedule')}}
             </p>
         </div>
     </section>
