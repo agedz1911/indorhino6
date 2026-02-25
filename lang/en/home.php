@@ -3,7 +3,7 @@
 return [
     'title' => '6th INDORHINO & 3rd ASEAN RHINOLOGIC SOCIETY',
     'association' => 'the Association of Indonesian Head and Neck Surgery ENT Specialists ',
-    'venue' => 'The Alana Hotel & Convention Center - Yogyakarta by Aston',
+    'venue' => 'The Alana Yogyakarta Hotel and Convention Center - Yogyakarta',
     'date' => 'June, 4th - 6th 2026',
     'register' => 'Register Now',
     'read_more' => 'Read More',

@@ -3,7 +3,7 @@
 return [
     'title' => 'INDORHINO ke-6 & PERKUMPULAN RHINOLOGI ASEAN ke-3',
     'association' => 'Perhimpunan Dokter Spesialis THT Bedah Kepala dan Leher Indonesia',
-    'venue' => 'The Alana Hotel & Convention Center - Yogyakarta oleh Aston',
+    'venue' => 'The Alana Yogyakarta Hotel dan Convention Center - Yogyakarta',
     'register' => 'Daftar Sekarang',
     'read_more' => 'Baca Selengkapnya',
     'get_contact' => 'Hubungi Kami di',
