@@ -18,7 +18,7 @@ class Faculty extends Component
 
     public function render()
     {
-        $queryfaculties = ModelsFaculty::where('is_active', 1)->orderBy('no_urut', 'asc')->with('schedules');
+        $queryfaculties = ModelsFaculty::where('is_active', 1)->orderBy('no_urut', 'asc')->with(['schedules', 'type_participants']);
 
         if (strlen($this->searchTerm) >= 3) {
             $queryfaculties->where(function ($q) {
@@ -26,8 +26,7 @@ class Faculty extends Component
             });
         }
 
-        $faculties = $queryfaculties
-            ->get();
+        $faculties = $queryfaculties->get();
 
         return view('livewire.resources.faculty', ['faculties' => $faculties]);
     }
