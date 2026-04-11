@@ -77,4 +77,5 @@ No refund for cancellation received afterward',
     'visit_culinary' => 'Culinary Delight',
     'note' => 'Note',
     'note_detail_schedule' => 'The scientific schedule is provisional and may be adjusted as required.',
+    'promo_event' => 'Join the 6th Indorhino jogja pre-event, see the schedule on',
 ];

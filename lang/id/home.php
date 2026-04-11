@@ -75,4 +75,5 @@ Tidak ada pengembalian dana untuk pembatalan yang diterima setelahnya',
     'visit_culinary' => 'Kenikmatan Kuliner',
     'note' => 'Catatan',
     'note_detail_schedule' => 'Jadwal ilmiah bersifat sementara dan dapat disesuaikan dengan kebutuhan.',
+    'promo_event' => 'Ikuti pra acara Indorhino jogja ke 6, lihat jadwalnya di',
 ];

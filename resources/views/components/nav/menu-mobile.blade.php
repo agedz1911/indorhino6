@@ -28,6 +28,10 @@
                 class="{{ request()->is('scientific-schedule') ? 'text-[#be124e]' : '' }} justify-between font-normal hover:text-[#be124e] after:content-[''] relative after:absolute flex items-center hover:after:items-center transition-all after:transition-all duration-300 after:duration-300 after:bg-[#be124e] hover:ps-3 after:left-0 after:h-0 hover:after:h-[5px] after:w-0 hover:after:w-[5px] after:rounded-full">{{__('menu.schedule')}} <i class="fa-solid fa-angle-right"></i></a>
         </li>
         <li>
+            <a href="{{route('pre-event')}}" wire:navigate
+                class="{{ request()->is('pre-event') ? 'text-[#be124e]' : '' }} justify-between font-normal hover:text-[#be124e] after:content-[''] relative after:absolute flex items-center hover:after:items-center transition-all after:transition-all duration-300 after:duration-300 after:bg-[#be124e] hover:ps-3 after:left-0 after:h-0 hover:after:h-[5px] after:w-0 hover:after:w-[5px] after:rounded-full">{{__('menu.pre_event')}} <i class="fa-solid fa-angle-right"></i></a>
+        </li>
+        <li>
             <a href="/registration" wire:navigate
                 class="{{ request()->is('registration') ? 'text-[#be124e]' : '' }} justify-between font-normal hover:text-[#be124e] after:content-[''] relative after:absolute flex items-center hover:after:items-center transition-all after:transition-all duration-300 after:duration-300 after:bg-[#be124e] hover:ps-3 after:left-0 after:h-0 hover:after:h-[5px] after:w-0 hover:after:w-[5px] after:rounded-full">{{__('menu.registration')}}
                 <i class="fa-solid fa-angle-right"></i></a>

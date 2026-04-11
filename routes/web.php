@@ -3,6 +3,7 @@
 use App\Livewire\HomePage;
 use App\Livewire\Pages\Accommodation;
 use App\Livewire\Pages\CongressInformation;
+use App\Livewire\Pages\PreEvent;
 use App\Livewire\Pages\Registration;
 use App\Livewire\Pages\ScientificProgram;
 use App\Livewire\Pages\Sponsor;
@@ -37,6 +38,7 @@ Route::get('/visiting', Visiting::class)->name('visiting');
 Route::get('/faculties', Faculty::class)->name('faculties');
 Route::get('/program-at-glance', AtGlance::class)->name('program-at-glance');
 Route::get('/scientific-schedule', Schedule::class)->name('scientific-schedule');
+Route::get('/pre-event', PreEvent::class)->name('pre-event');
 
 // Route::prefix('/congress-information')->group(function () {
 //     Route::get('/', CongressInformation::class);

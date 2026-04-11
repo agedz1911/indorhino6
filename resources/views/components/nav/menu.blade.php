@@ -27,7 +27,7 @@
 
     <div class="dropdown dropdown-hover">
         <div tabindex="0"
-            class="{{ request()->is('program-at-glance') || request()->is('topics') || request()->is('scientific-schedule') ? 'text-[#be124e]' : 'text-white' }} hover:cursor-pointer hover:text-[#be124e]">
+            class="{{ request()->is('program-at-glance') || request()->is('topics') || request()->is('scientific-schedule') || request()->is('pre-event') ? 'text-[#be124e]' : 'text-white' }} hover:cursor-pointer hover:text-[#be124e]">
             {{__('menu.program')}} <i class="fa-solid fa-angle-down"></i></div>
         <ul tabindex="0" class="dropdown-content menu bg-base-100 rounded-box gap-2 w-60 p-2 shadow-sm">
             
@@ -38,6 +38,10 @@
             <li>
                 <a href="#" wire:navigate
                     class="{{ request()->is('scientific-schedule') ? 'text-[#be124e]' : '' }} justify-between hover:text-[#be124e]">{{__('menu.schedule')}} <i class="fa-solid fa-angle-right"></i></a>
+            </li>
+            <li>
+                <a href="{{route('pre-event')}}" wire:navigate
+                    class="{{ request()->is('pre-event') ? 'text-[#be124e]' : '' }} justify-between hover:text-[#be124e]">{{__('menu.pre_event')}} <i class="fa-solid fa-angle-right"></i></a>
             </li>
     </div>
 
