@@ -10,7 +10,7 @@
     <section class="pt-10 pb-24 px-5 lg:px-8 bg-[#D9F9F5]/30">
         <div class="flex flex-wrap justify-evenly">
             @foreach ($preEvents as $event)
-            <div class="card bg-base-100 w-full max-w-sm shadow-sm">
+            <div class="card bg-base-100 w-full max-w-sm shadow-sm mt-5">
                 <figure>
                     <img src="{{ asset('storage/' . $event->image)}}" class="rounded-lg" alt="Shoes" />
                 </figure>
