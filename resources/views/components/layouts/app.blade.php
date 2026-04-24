@@ -29,7 +29,7 @@
     <!-- theme daisyui -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@$5/themes.css" rel="stylesheet" type="text/css" />
     <!--FontAwesome CSS-->
-    <script src="https://kit.fontawesome.com/6d07745da9.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/f662ae2afd.js" crossorigin="anonymous"></script>
 </head>
 
 <body>

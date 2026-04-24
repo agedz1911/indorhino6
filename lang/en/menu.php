@@ -26,4 +26,5 @@ return [
     'visit' => 'Visiting',
     'visit_venue' => 'Conference Venue',
     'social_program' => 'Social Program',
+    'pre_event' => 'Pre-Event',
 ];

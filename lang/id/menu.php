@@ -27,4 +27,5 @@ return [
     'visit' => 'Mengunjungi',
     'visit_venue' => 'Tempat Konferensi',
     'social_program' => 'Program Sosial',
+    'pre_event' => 'Pra-Acara',
 ];
