@@ -39,6 +39,7 @@ Route::get('/faculties', Faculty::class)->name('faculties');
 Route::get('/program-at-glance', AtGlance::class)->name('program-at-glance');
 Route::get('/scientific-schedule', Schedule::class)->name('scientific-schedule');
 Route::get('/pre-event', PreEvent::class)->name('pre-event');
+Route::get('/accommodation', Accommodation::class);
 
 // Route::prefix('/congress-information')->group(function () {
 //     Route::get('/', CongressInformation::class);
@@ -59,7 +60,6 @@ Route::get('/pre-event', PreEvent::class)->name('pre-event');
 //     Route::get('/#venue', Visiting::class);
 // });
 
-// Route::get('/accommodation', Accommodation::class);
 
 // Route::get('/social-program', Tour::class)->name('tour');
 

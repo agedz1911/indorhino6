@@ -52,7 +52,7 @@
         </a>
     </li>
     <li>
-        <a href="#" wire:navigate
+        <a href="/accommodation" wire:navigate
             class="{{ request()->is('accommodation') ? 'text-[#be124e]' : 'text-white' }} hover:text-[#be124e] hover:underline">{{__('menu.accommodation')}}
         </a>
     </li>
