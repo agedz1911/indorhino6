@@ -34,7 +34,7 @@
                         <p class="m-0 text-xs text-gray-500 italic">{{__('home.note_online_submission')}}</p>
                     </div>
                     <div class="w-full flex text-center">
-                        <a href="https://expo.virconex-id.com/abstract/indorhino2026/index.php/upload_abstract" class="btn rounded-xl bg-[#be124e] text-white hover:bg-[#be124e] w-full"><i class="fa-solid fa-upload me-1"></i> Submit Abstract</a>
+                        <a href="https://expo.virconex-id.com/abstract/indorhino2026/index.php/upload_fullpaper" class="btn rounded-xl bg-[#be124e] text-white hover:bg-[#be124e] w-full"><i class="fa-solid fa-upload me-1"></i> Submit Full Paper</a>
 
                     </div>
                 </div>
