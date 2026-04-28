@@ -9,7 +9,9 @@ class RegInfo extends Component
 {
     public function render()
     {
-        $regInfomations = ModelsRegInfo::all();
-        return view('livewire.resources.reg-info', ['regInfomations' => $regInfomations]);
+        $regInfomations = ModelsRegInfo::where('category->en', 'Registration')->get();
+        return view('livewire.resources.reg-info', [
+            'regInfomations' => $regInfomations,
+        ]);
     }
 }

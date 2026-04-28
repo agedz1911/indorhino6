@@ -7,6 +7,7 @@ use App\Filament\Resources\RegInfoResource\RelationManagers;
 use App\Models\RegInfo;
 use Filament\Forms;
 use Filament\Forms\Components\MarkdownEditor;
+use Filament\Forms\Components\Select;
 use Filament\Forms\Components\Textarea;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Components\Toggle;
@@ -38,6 +39,12 @@ class RegInfoResource extends Resource
                 TextInput::make('title')
                     ->live(onBlur: true)
                     ->afterStateUpdated(fn(Set $set, ?string $state) => $set('slug', Str::slug($state))),
+                Select::make('category')
+                    ->options([
+                        'Registration' => 'Registration',
+                        'Accommodation' => 'Accommodation',
+                    ])
+                    ->required(),
                 TextInput::make('slug'),
                 // Textarea::make('description')->rows(8),
                 MarkdownEditor::make('description'),
@@ -52,6 +59,7 @@ class RegInfoResource extends Resource
         return $table
             ->columns([
                 TextColumn::make('id')->searchable(),
+                TextColumn::make('category'),
                 TextColumn::make('title'),
                 TextColumn::make('description')->limit(75),
             ])

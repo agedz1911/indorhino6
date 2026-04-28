@@ -14,21 +14,24 @@ class RegInfo extends Model
         'title',
         'slug',
         'description',
-        'is_active'
+        'is_active',
+        'category'
     ];
 
     public array $translatable = [
         'title',
         'slug',
         'description',
-        'is_active'
+        'is_active',
+        'category'
     ];
 
     protected $casts = [
         'title' => 'array',
         'slug' => 'array',
         'description' => 'array',
-        'is_active' => 'array'
+        'is_active' => 'array',
+        'category' => 'array',
     ];
 
 }

@@ -1,6 +1,7 @@
 <div>
     <div class="bg-white border border-gray-200 divide-y divide-gray-200 rounded-lg">
-        @foreach ($regInfomations as $regInfomation)
+    {{-- @dd($regInfomations) --}}
+    @foreach ($regInfomations as $regInfomation)
         <details class="p-6 group " {{ $loop->first ? 'open' : '' }}    >
             <summary class="flex items-center justify-between cursor-pointer">
                 <h5 class="text-xl font-semibold text-primary-900">

@@ -2,7 +2,8 @@
     <section class="breadcrumbs relative pb-0">
         <div class="absolute inset-0 bg-gradient-to-t from-[#D9F9F5]/10 to-[#008795]/80"></div>
         <div class="py-16 lg:py-28 text-center relative">
-            <h2 class="text-white uppercase text-2xl font-semibold tracking-wide lg:text-4xl">{{__('menu.accommodation')}}
+            <h2 class="text-white uppercase text-2xl font-semibold tracking-wide lg:text-4xl">
+                {{__('menu.accommodation')}}
             </h2>
         </div>
     </section>
@@ -59,11 +60,13 @@
         </div>
 
         <div class="bg-white border border-gray-200 divide-y divide-gray-200 rounded-lg">
-
-            <details class="p-6 group " {{  'open'  }}>
+            {{-- @dd($infos) --}}
+            @foreach ($infos as $info)
+            <details class="p-6 group " {{ 'open' }}>
                 <summary class="flex items-center justify-between cursor-pointer">
                     <h5 class="text-xl font-semibold text-[#006a5f]-900">
-                        {{__('home.hotel_cancel')}}
+                        {{$info->title}}
+                        {{-- {{__('home.hotel_cancel')}} --}}
                     </h5>
                     <span class="relative flex-shrink-0 ml-1.5 w-5 h-5">
                         <i class="fa-solid fa-eye absolute inset-0 w-5 h-5 opacity-0 group-open:opacity-100"></i>
@@ -72,9 +75,10 @@
                 </summary>
 
                 <p class="mt-4 leading-relaxed text-slate-500">
-                    {{__('home.hotel_info_cancellation')}}
+                    {!! str($info->description)->markdown()->sanitizeHtml() !!}
                 </p>
             </details>
+            @endforeach
 
         </div>
     </section>
